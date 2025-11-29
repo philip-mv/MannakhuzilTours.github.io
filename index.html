@@ -73,7 +73,6 @@
     margin-bottom: 50px;
   }
   .packages h2, .services h2, #about h2, #contact h2 {
-    /* all section titles are already white */
     margin-bottom: 22px;
     font-weight: 700;
     text-align: center;
@@ -179,6 +178,24 @@
     margin: 0 auto;
     border: 3px solid #a5d6a7;
   }
+  .contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .contact-link {
+    color: #2e7d32;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  .contact-link:hover {
+    background-color: #a5d6a7;
+    color: #145214;
+  }
   @media (max-width: 768px) {
     main {
       margin: 25px 15px;
@@ -230,7 +247,7 @@
         <button onclick="window.location='book-alleppey.html'">Book Now</button>
       </div>
       <div class="place-card">
-        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=400&q=80" alt="Kovalam Beach" />
+        <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&q=80" alt="Kovalam Beach" />
         <h3>Kovalam</h3>
         <p>Beautiful palm-lined beaches with golden sands and vibrant local culture.</p>
         <button onclick="window.location='book-kovalam.html'">Book Now</button>
@@ -282,9 +299,11 @@
   </section>
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: mannakuzhiltours@gmail.com</p>
-    <p>Phone: +91 98765 43210</p>
-    <p>Address: Mannakuzhil, Kerala, India</p>
+    <div class="contact-info">
+      <p><a href="mailto:mannakuzhiltours@gmail.com?subject=Tours%20Inquiry&body=Hello%20Mannakuzhil%20Tours%2C%0A%0APlease%20share%20details%20about%20your%20services.%0A%0AThanks!" class="contact-link">📧 mannakuzhiltours@gmail.com</a></p>
+      <p>📞 Phone: +91 98765 43210</p>
+      <p>📍 Address: Mannakuzhil, Kerala, India</p>
+    </div>
   </section>
 </main>
 <footer>&copy; 2025 Mannakuzhil Tours. All rights reserved.</footer>

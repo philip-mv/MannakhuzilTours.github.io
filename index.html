@@ -48,7 +48,17 @@
 
   h2 {
     color: #fff !important;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-weight: 800;
+  }
+
+  /* Giant colored emojis */
+  h2::before {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    margin-right: 12px;
+    display: inline-block;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    color: #4caf50;
   }
 
   header {
@@ -173,15 +183,6 @@
     50% { transform: translateY(-8px) scale(1.02); }
   }
 
-  .hero::before {
-    content: "✨";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    animation: sparkle 3s ease-in-out infinite;
-  }
-
   .hero::after {
     content:"";
     position:absolute;
@@ -199,11 +200,6 @@
     100% {opacity:0.1; transform: scale(1);}
   }
 
-  @keyframes sparkle {
-    0%, 100% { opacity: 0.6; transform: scale(1) rotate(0deg); }
-    50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
-  }
-
   .section-box {
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(16px);
@@ -212,17 +208,6 @@
     box-shadow: 0 12px 40px rgba(0,60,0,0.2);
     margin-bottom: 36px;
     border: 1px solid rgba(255,255,255,0.3);
-  }
-
-  .section-box h2 {
-    margin-bottom: 24px;
-    font-weight: 800;
-    text-align: center;
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    background: linear-gradient(135deg, #fff, #e8f5e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
   }
 
   .reveal {
@@ -256,6 +241,7 @@
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 1px solid rgba(165,214,167,0.4);
     flex: 1 1 clamp(260px, 45vw, 320px);
+    min-height: 420px;
   }
 
   .place-card::before, .service-card::before {
@@ -309,7 +295,7 @@
 
   .btn-primary {
     background: linear-gradient(135deg, var(--green-main), var(--green-dark));
-    color: #daf5d6;
+    color: #daf5d6 !important;
     border: none;
     border-radius: 50px;
     padding: clamp(12px, 3vw, 16px) clamp(24px, 5vw, 32px);
@@ -323,6 +309,8 @@
     overflow: hidden;
     touch-action: manipulation;
     min-height: clamp(48px, 8vw, 56px);
+    width: 100%;
+    margin-top: auto;
   }
 
   .btn-primary::before {
@@ -384,7 +372,7 @@
   }
 
   .contact-link {
-    color: var(--green-main);
+    color: #daf5d6 !important;
     font-weight: 700;
     font-size: clamp(1rem, 3vw, 1.1rem);
     text-decoration: none;
@@ -393,41 +381,16 @@
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: inline-block;
     position: relative;
-    background: rgba(165,214,167,0.2);
+    background: linear-gradient(135deg, #a5d6a7, #81c784);
     border: 2px solid rgba(46,125,50,0.3);
     margin: 8px 0;
     min-width: clamp(280px, 70vw, 320px);
-  }
-
-  .contact-link:hover {
-    background: linear-gradient(135deg, #a5d6a7, #81c784);
-    color: var(--green-dark);
-    transform: translateY(-2px) scale(1.02);
     box-shadow: 0 8px 24px rgba(46,125,50,0.3);
   }
 
-  .contact-link::before {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    border-radius: inherit;
-    border: 2px solid transparent;
-    opacity: 0;
-    pointer-events: none;
-    background: linear-gradient(45deg, #a5d6a7, #4caf50, #a5d6a7, #81c784) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-  }
-
-  .contact-link:hover::before {
-    animation: pulseOutline 1s ease-out forwards;
-  }
-
-  @keyframes pulseOutline {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.2); }
+  .contact-link:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(46,125,50,0.4);
   }
 
   footer {
@@ -452,6 +415,10 @@
     .places {
       gap: 24px;
     }
+    
+    .place-card, .service-card {
+      min-height: 480px;
+    }
   }
 
   /* Mobile-specific optimizations */
@@ -462,11 +429,12 @@
     
     .places, .services-grid {
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
     
     .place-card, .service-card {
       max-width: 100%;
+      min-height: 460px;
     }
     
     nav {
@@ -590,7 +558,7 @@
   </section>
 </main>
 
-<footer>© 2025 Mannakuzhil Tours. All rights reserved. 🌿</footer>
+<footer>© 2025 Mannakuzhil Tours. All rights reserved.</footer>
 
 <script>
   // Enhanced scroll reveal with staggered timing
@@ -652,6 +620,10 @@
         const rotateX = ((y / rect.height) - 0.5) * -8;
         card.style.transform = `translateY(-12px) scale(1.03) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
     }
     
     // Mobile/Desktop touch feedback
@@ -659,10 +631,14 @@
       this.style.transform = 'scale(0.98)';
     }, { passive: true });
     
-    ['mouseleave', 'touchend', 'touchcancel'].forEach(event => {
+    ['touchend', 'touchcancel'].forEach(event => {
       card.addEventListener(event, () => {
-        card.style.transform = '';
-      });
+        setTimeout(() => {
+          if (window.innerWidth < 769) {
+            this.style.transform = '';
+          }
+        }, 200);
+      }, { passive: true });
     });
   });
 

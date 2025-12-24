@@ -91,6 +91,25 @@
     border-radius: 20px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
     font-size: 0.95rem;
+    position: relative;
+  }
+
+  /* glowing underline */
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: -3px;
+    height: 2px;
+    background: linear-gradient(90deg, #e8f5e9, #a5d6a7);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+  }
+
+  nav a:hover::after {
+    transform: scaleX(1);
   }
 
   nav a:hover {
@@ -124,6 +143,17 @@
     padding: 24px;
     position: relative;
     overflow: hidden;
+  }
+
+  /* floating hero text */
+  .hero-title {
+    animation: floatHero 4s ease-in-out infinite;
+  }
+
+  @keyframes floatHero {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
   }
 
   .hero::after {
@@ -332,11 +362,32 @@
     border-radius: 6px;
     transition: all 0.3s ease;
     display: inline-block;
+    position: relative;
   }
 
   .contact-link:hover {
     background-color: #a5d6a7;
     color: var(--green-dark);
+  }
+
+  /* pulsing outline on hover */
+  .contact-link::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    border: 1px solid rgba(255,255,255,0.0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .contact-link:hover::before {
+    animation: pulseOutline 0.9s ease-out forwards;
+  }
+
+  @keyframes pulseOutline {
+    0%   { opacity: 0.6; transform: scale(1);   border-color: rgba(165,214,167,0.9); }
+    100% { opacity: 0;   transform: scale(1.18); border-color: rgba(165,214,167,0); }
   }
 
   footer {
@@ -346,6 +397,14 @@
     padding: 12px 10px;
     font-size: 0.9rem;
     letter-spacing: 0.02em;
+  }
+
+  /* 3D tilt only on desktop */
+  @media (min-width: 769px) {
+    .place-card {
+      transform-style: preserve-3d;
+      perspective: 800px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -413,7 +472,9 @@
 </nav>
 
 <main>
-  <div class="hero reveal" id="home">Explore Kerala with Mannakuzhil Tours</div>
+  <div class="hero reveal" id="home">
+    <span class="hero-title">Explore Kerala with Mannakuzhil Tours</span>
+  </div>
 
   <section id="packages" class="section-box reveal">
     <h2>Packages</h2>
@@ -519,6 +580,24 @@
       window.location.href = url;
     }, 400);
   }
+
+  // 3D tilt on package cards (desktop)
+  const cards = document.querySelectorAll('.place-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      if (window.innerWidth < 769) return; // disable on mobile
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const rotateY = ((x / rect.width) - 0.5) * 8;
+      const rotateX = ((y / rect.height) - 0.5) * -8;
+      card.style.transform =
+        `translateY(-6px) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0) scale(1)';
+    });
+  });
 </script>
 </body>
 </html>

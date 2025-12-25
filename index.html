@@ -52,8 +52,9 @@
     color: #4caf50;
   }
 
+  /* Fixed header container that always follows scroll */
   .header-container {
-    position: fixed; /* Changed to fixed */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -62,7 +63,7 @@
   }
 
   .header-container.scrolled {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
   }
 
   .header-container.hidden {
@@ -72,7 +73,7 @@
   header {
     background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(56,142,60,0.98));
     color: #daf5d6;
-    padding: 16px 20px;
+    padding: 20px 20px; /* Normal padding */
     display: flex;
     align-items: center;
     gap: 14px;
@@ -81,12 +82,12 @@
   }
 
   header.scrolled {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Shrunk padding */
   }
 
   header .logo {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     border-radius: 12px;
     object-fit: contain;
     background: rgba(255,255,255,0.95);
@@ -96,19 +97,19 @@
   }
 
   header.scrolled .logo {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
   }
 
   header .title {
-    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    font-size: clamp(1.4rem, 3.5vw, 1.7rem);
     font-weight: 800;
     letter-spacing: 1.2px;
     transition: font-size 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   header.scrolled .title {
-    font-size: clamp(1.1rem, 2.8vw, 1.4rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
   }
 
   nav {
@@ -117,14 +118,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    padding: 12px;
+    padding: 14px;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.1);
     transition: padding 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   nav.scrolled {
-    padding: 8px;
+    padding: 10px;
   }
 
   nav a {
@@ -162,12 +163,21 @@
     color: var(--green-dark);
     transform: translateY(-2px) scale(1.05);
   }
+
+  /* Add top padding to main so content isn't hidden behind fixed header */
   main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 24px 16px;
-    padding-top: 140px; /* Added space for fixed header */
+    padding-top: 160px; /* Space for full-size header + nav */
   }
+
+  @media (max-width: 768px) {
+    main {
+      padding-top: 150px;
+    }
+  }
+
   .hero {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
                 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85');
@@ -402,11 +412,9 @@
     .place-card {
       transform-style: preserve-3d;
     }
-   
     .places {
       gap: 24px;
     }
-   
     .place-card, .service-card {
       min-height: 480px;
     }
@@ -415,24 +423,20 @@
   @media (max-width: 768px) {
     main {
       padding: 20px 12px;
-      padding-top: 130px;
+      padding-top: 150px;
     }
-   
     .places, .services-grid {
       flex-direction: column;
       gap: 24px;
     }
-   
     .place-card, .service-card {
       max-width: 100%;
       min-height: 460px;
     }
-   
     nav {
       gap: 6px;
       padding: 10px 8px;
     }
-   
     nav a {
       padding: 8px 14px;
       min-width: 70px;
@@ -443,7 +447,6 @@
       margin-bottom: 28px;
       padding: 24px 20px;
     }
-   
     .section-box {
       padding: 24px 20px 28px;
     }
@@ -548,7 +551,7 @@
   <footer>© 2025 Mannakuzhil Tours. All rights reserved.</footer>
 
   <script>
-    // Fixed header behavior: always follows scroll, shrinks after 50px, hides on scroll down, shows on scroll up
+    // Fixed header: always follows scroll, shrinks after 50px, hides on scroll down, shows on scroll up
     const headerContainer = document.getElementById('headerContainer');
     const header = document.getElementById('header');
     const nav = document.getElementById('nav');
@@ -558,7 +561,7 @@
     function updateHeader() {
       const currentScrollY = window.scrollY;
 
-      // Shrink after 50px
+      // Add scrolled class after 50px (shrink + shadow)
       if (currentScrollY > 50) {
         headerContainer.classList.add('scrolled');
         header.classList.add('scrolled');
@@ -569,8 +572,8 @@
         nav.classList.remove('scrolled');
       }
 
-      // Hide when scrolling down (after header is visible), show when scrolling up
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      // Hide on scroll down, show on scroll up (only after some scroll)
+      if (currentScrollY > lastScrollY && currentScrollY > 120) {
         headerContainer.classList.add('hidden');
       } else if (currentScrollY < lastScrollY) {
         headerContainer.classList.remove('hidden');
@@ -587,10 +590,10 @@
       }
     });
 
-    // Run on load
+    // Initial run
     updateHeader();
 
-    // Enhanced scroll reveal with staggered timing
+    // Rest of your existing scripts (reveal, navigation, tilt, etc.)
     const revealEls = document.querySelectorAll('.reveal');
     function handleReveal() {
       const triggerBottom = window.innerHeight * 0.8;
@@ -604,19 +607,15 @@
     window.addEventListener('scroll', handleReveal);
     window.addEventListener('load', handleReveal);
 
-    // Smooth page navigation
     function goToPage(url) {
-      const body = document.body;
-      body.classList.add('fade-out');
+      document.body.classList.add('fade-out');
       setTimeout(() => {
         window.location.href = url;
       }, 400);
     }
 
-    // Active nav highlighting
     const navLinks = document.querySelectorAll('nav a');
     const sections = document.querySelectorAll('section, .hero');
- 
     function updateActiveNav() {
       let current = 'home';
       sections.forEach(section => {
@@ -625,7 +624,6 @@
           current = section.getAttribute('id');
         }
       });
-   
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -633,11 +631,9 @@
         }
       });
     }
- 
     window.addEventListener('scroll', updateActiveNav);
-    updateActiveNav(); // Initial call
+    updateActiveNav();
 
-    // Desktop 3D tilt + Mobile touch feedback
     const cards = document.querySelectorAll('.place-card, .service-card');
     cards.forEach(card => {
       if (window.innerWidth >= 769) {
@@ -649,38 +645,29 @@
           const rotateX = ((y / rect.height) - 0.5) * -8;
           card.style.transform = `translateY(-12px) scale(1.03) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
-     
         card.addEventListener('mouseleave', () => {
           card.style.transform = '';
         });
       }
-   
-      card.addEventListener('touchstart', function(e) {
+      card.addEventListener('touchstart', function() {
         this.style.transform = 'scale(0.98)';
       }, { passive: true });
-   
       ['touchend', 'touchcancel'].forEach(event => {
         card.addEventListener(event, () => {
           setTimeout(() => {
-            if (window.innerWidth < 769) {
-              this.style.transform = '';
-            }
+            if (window.innerWidth < 769) this.style.transform = '';
           }, 200);
         }, { passive: true });
       });
     });
 
-    // Button touch feedback
     document.querySelectorAll('.btn-primary').forEach(btn => {
       btn.addEventListener('touchstart', function() {
         this.style.transform = 'scale(0.95)';
       }, { passive: true });
-   
       ['touchend', 'touchcancel'].forEach(event => {
         btn.addEventListener(event, () => {
-          setTimeout(() => {
-            this.style.transform = '';
-          }, 200);
+          setTimeout(() => this.style.transform = '', 200);
         }, { passive: true });
       });
     });

@@ -61,22 +61,23 @@
     color: #4caf50;
   }
 
-  header {
-    background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(56,142,60,0.98));
-    color: #daf5d6;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
+header {
+  background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(56,142,60,0.98));
+  color: #daf5d6;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: fixed;   /* <- FIXED, not sticky/absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
 
   header .logo {
     width: 48px;
@@ -468,12 +469,11 @@
 
 /* base header stays as you already have, only add: */
 .header-spacer {
-  height: 92px;       /* initial header height */
+  height: 72px;       /* initial header height */
   width: 100%;
   transition: height 0.3s ease;
 }
 header.scrolled {
-  position: fixed;
   top: 0;
   padding-top: 10px;   /* slightly smaller on scroll */
   padding-bottom: 6px;
@@ -481,7 +481,7 @@ header.scrolled {
 }
 
 .header-spacer.scrolled {
-  height: 64px;        /* height when header is shrunk */
+  height: 56px;        /* height when header is shrunk */
 }
 
 header.scrolled .logo {
@@ -509,9 +509,10 @@ header.scrolled .title {
       <a href="#contact">Contact</a>
     </nav>
   </header>
+  
+  <!-- ADD THIS: spacer for header height -->
   <div id="headerSpacer" class="header-spacer"></div>
 </div>
-
 
 <main>
   <div class="hero reveal" id="home">
@@ -695,33 +696,22 @@ header.scrolled .title {
       }, { passive: true });
     });
   });
-// Manit-style sticky header: shrink + hide/show
+// Simple shrink-on-scroll sticky header
 const headerEl = document.getElementById('header');
 const spacerEl = document.getElementById('headerSpacer');
-let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
-  const currentY = window.scrollY;
-  const goingDown = currentY > lastScrollY;
+  const y = window.scrollY;
 
-  // shrink after 50px
-  if (currentY > 50) {
+  if (y > 50) {
     headerEl.classList.add('scrolled');
     spacerEl.classList.add('scrolled');
   } else {
     headerEl.classList.remove('scrolled');
     spacerEl.classList.remove('scrolled');
   }
-
-  // hide on fast scroll down, show on scroll up
-  if (currentY > 120 && goingDown) {
-    headerEl.style.transform = 'translateY(-100%)';
-  } else {
-    headerEl.style.transform = 'translateY(0)';
-  }
-
-  lastScrollY = currentY;
 });
+
 
 </script>
 </body>

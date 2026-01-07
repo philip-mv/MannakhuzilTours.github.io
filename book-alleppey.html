@@ -1,267 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alleppey Houseboat Booking with Detailed Itineraries | Mannakuzhil Tours</title>
-  <meta name="description" content="Book your Alleppey houseboat tour with complete itinerary details: day cruise, 1 night deluxe, 2 nights premium packages. Private backwater cruise on Vembanad Lake with authentic Kerala meals and village views.">
-  <meta name="keywords" content="Alleppey houseboat booking, Alleppey backwater itinerary, Kerala houseboat cruise, 1 night houseboat package, Alleppey day cruise, Vembanad Lake houseboat, Kerala houseboat tour 2026">
-  <meta property="og:title" content="Book Alleppey Houseboat Tour with Full Itinerary – Mannakuzhil Tours">
-  <meta property="og:description" content="Experience serene Alleppey backwaters with detailed itineraries: day trips, overnight stays & premium 2-night packages. Secure booking & private houseboat.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1200&auto=format&fit=crop&q=80">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="logo-square.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alleppey Houseboat Booking 2026 • Mannakuzhil Tours</title>
+  <meta name="description" content="Book your private Alleppey houseboat experience with detailed itineraries: day cruise, 1-night deluxe & 2-night premium packages. Secure payment • Authentic Kerala backwaters."/>
+  <link rel="icon" type="image/png" href="logo-square.png"/>
+  
   <style>
     :root {
       --green-main: #2e7d32;
-      --green-dark: #145214;
-      --green-light: #d0e8d7;
-      --bg-gradient: linear-gradient(to bottom, #70c1ff, #2e7d32);
-      --card-bg: rgba(255,255,255,0.94);
-      --error-red: #c62828;
+      --green-dark: #1b5e20;
+      --green-light: #e8f5e9;
+      --error-red: #d32f2f;
+      --text: #1a3c34;
+      --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #2e7d32 100%);
+      --card-bg: rgba(255,255,255,0.92);
+      --shadow-sm: 0 4px 15px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg-gradient);
-      color: #123022;
+      color: var(--text);
       line-height: 1.6;
+      min-height: 100vh;
     }
-    .wrapper { max-width: 1100px; margin: 30px auto 60px; padding: 0 16px; }
-    header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+
+    .wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+
     .back-link {
-      font-size: 0.95rem; text-decoration: none; color: white; background: rgba(20,82,20,0.85);
-      padding: 6px 14px; border-radius: 30px; transition: 0.3s;
+      color: white;
+      background: rgba(27,94,32,0.85);
+      padding: 0.5rem 1.1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
-    .back-link:hover { background: var(--green-dark); }
-    h1 { font-size: clamp(1.6rem, 5vw, 2.1rem); color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
-    .hero-img { width: 100%; max-height: 380px; object-fit: cover; border-radius: 16px; box-shadow: 0 6px 24px rgba(0,0,0,0.35); margin-bottom: 28px; }
+
+    .back-link:hover {
+      background: var(--green-dark);
+      transform: translateY(-1px);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      color: white;
+      font-weight: 800;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: clamp(280px, 45vh, 420px);
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2.5rem;
+    }
+
     .content-box {
-      background: var(--card-bg); backdrop-filter: blur(8px); border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.18); padding: 24px; margin-bottom: 32px;
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
     }
-    h2 { color: var(--green-dark); margin-bottom: 16px; font-size: 1.6rem; }
-    h3 { color: var(--green-main); margin: 24px 0 12px; font-size: 1.35rem; }
-    .itinerary { margin: 20px 0; padding: 18px; background: #f9fcf9; border-radius: 10px; border: 1px solid #d0e8d7; }
-    .itinerary ul { list-style-type: disc; padding-left: 26px; margin: 12px 0; }
-    form label { display: block; font-weight: 600; margin: 12px 0 6px; font-size: 0.95rem; }
+
+    .content-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 { color: var(--green-dark); margin-bottom: 1.2rem; font-size: 1.8rem; }
+    h3 { color: var(--green-main); margin: 2rem 0 1rem; font-size: 1.45rem; }
+
+    .itinerary {
+      background: rgba(232,245,233,0.7);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.2rem 0;
+      border: 1px solid var(--green-light);
+    }
+
+    ul { padding-left: 1.6rem; margin: 0.8rem 0; }
+    li { margin-bottom: 0.6rem; }
+
+    form label {
+      font-weight: 600;
+      margin: 1.2rem 0 0.5rem;
+      display: block;
+      font-size: 0.98rem;
+    }
+
     input, select, textarea {
-      width: 100%; padding: 10px; border: 1px solid #b5c9b8; border-radius: 6px; font-size: 1rem;
+      width: 100%;
+      padding: 0.9rem;
+      border: 1px solid #c8e6c9;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.25s ease;
     }
-    input:invalid:focus, input.error { border-color: var(--error-red); }
-    .error-message { color: var(--error-red); font-size: 0.85rem; margin-top: 4px; display: none; }
-    .passenger-section { margin: 24px 0; border: 1px solid #ccc; border-radius: 8px; padding: 16px; background: #f9fcf9; }
-    .passenger-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-    .total-price { font-size: 1.4rem; font-weight: bold; color: var(--green-dark); margin: 24px 0; text-align: center; padding: 12px; background: var(--green-light); border-radius: 8px; }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--green-main);
+      box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+    }
+
+    input.error {
+      border-color: var(--error-red);
+      background: #ffebee;
+    }
+
+    .error-message {
+      color: var(--error-red);
+      font-size: 0.82rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    .passenger-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.6);
+      border-radius: 12px;
+      border: 1px solid var(--green-light);
+    }
+
+    .passenger-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .total-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      text-align: center;
+      padding: 1.2rem;
+      background: var(--green-light);
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
     .pay-btn {
-      background: var(--green-main); color: white; border: none; padding: 16px 40px;
-      font-size: 1.2rem; font-weight: 600; border-radius: 50px; cursor: pointer; display: block;
-      margin: 28px auto 0; transition: 0.3s;
+      background: var(--green-main);
+      color: white;
+      border: none;
+      padding: 1.1rem 3rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      display: block;
+      margin: 2.5rem auto 0;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(46,125,50,0.3);
     }
-    .pay-btn:hover { background: var(--green-dark); transform: translateY(-2px); }
-    .pay-btn:disabled { background: #aaa; cursor: not-allowed; }
-    .note { font-size: 0.9rem; color: #444; margin-top: 20px; text-align: center; }
-    @media (max-width: 768px) { .wrapper { padding: 0 12px; } .content-box { padding: 18px; } }
+
+    .pay-btn:hover:not(:disabled) {
+      background: var(--green-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(46,125,50,0.45);
+    }
+
+    .pay-btn:disabled {
+      background: #9e9e9e;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .note {
+      font-size: 0.92rem;
+      color: #444;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper { padding: 1.2rem; }
+      .content-box { padding: 1.8rem; }
+    }
   </style>
 </head>
 <body>
 
 <div class="wrapper">
   <header>
-    <a href="index.html" class="back-link">← Home</a>
-    <h1>Alleppey Houseboat Booking with Detailed Itineraries</h1>
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>Alleppey Houseboat Booking</h1>
   </header>
 
   <img class="hero-img"
-       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1200&auto=format&fit=crop&q=80"
-       alt="Alleppey houseboat cruise on Vembanad Lake">
+       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=90"
+       alt="Traditional Kerala houseboat cruising through serene Alleppey backwaters">
 
   <div class="content-box">
-    <h2>Alleppey Houseboat Tour Packages – Full Itinerary Details (2026)</h2>
-    <p>Experience the best of Alleppey backwaters with our private houseboat packages. All cruises are on traditional kettuvallam boats with private crew, authentic Kerala cuisine, and scenic routes through Vembanad Lake, Punnamada Lake, and narrow canals. Prices are fixed per boat (not per person) – perfect for families, couples, and groups.</p>
+    <h2>Private Alleppey Houseboat Experiences • 2026</h2>
+    <p>All packages are on exclusive kettuvallam houseboats with private crew, authentic Kerala cuisine & scenic backwater routes.</p>
 
-    <h3>1. Alleppey Day Cruise – 6-7 Hour Backwater Tour</h3>
+    <h3>1. Day Cruise • 6–7 Hours</h3>
     <div class="itinerary">
-      <p><strong>Best for:</strong> Day trippers, short visits to Kerala backwaters</p>
-      <p><strong>Duration:</strong> 6–7 hours | <strong>Price:</strong> Approx ₹12,000 total (private boat)</p>
+      <strong>₹12,000 total • Private boat</strong><br><br>
       <ul>
-        <li><strong>Check-in:</strong> 11:00 AM at Pallathuruthy / Finishing Point Jetty, Alleppey</li>
-        <li><strong>Cruise Route:</strong> Vembanad Lake → Punnamada Lake → Punchiri Jetty → R/C Blocks paddy fields</li>
-        <li><strong>Highlights:</strong> Palm-fringed canals, village life, coir-making units, toddy shops, traditional Kerala fishing</li>
-        <li><strong>Lunch:</strong> Fresh onboard Kerala meal (fish/chicken/veg options)</li>
-        <li><strong>Check-out:</strong> 5:00–5:30 PM</li>
+        <li>11:00 AM check-in • Pallathuruthy / Finishing Point</li>
+        <li>Vembanad & Punnamada Lake cruise</li>
+        <li>Palm canals, village life, coir making</li>
+        <li>Onboard Kerala lunch</li>
+        <li>~5:00–5:30 PM finish</li>
       </ul>
     </div>
 
-    <h3>2. 1 Night Deluxe Houseboat Package – Overnight Kerala Backwater Cruise</h3>
+    <h3>2. 1 Night Deluxe • ~21–22 Hours</h3>
     <div class="itinerary">
-      <p><strong>Best for:</strong> Couples, honeymooners, short romantic getaway</p>
-      <p><strong>Duration:</strong> ~21–22 hours | <strong>Price:</strong> Approx ₹15,000 total (private boat)</p>
+      <strong>₹15,000 total • Private boat</strong><br><br>
       <ul>
-        <li><strong>Check-in:</strong> 12:00 Noon at Alleppey jetty</li>
-        <li><strong>Day Cruise:</strong> Punnamada Lake (Nehru Trophy snake boat race venue) → Vembanad Lake → Kainakary village narrow canals</li>
-        <li><strong>Meals:</strong> Lunch + evening tea/snacks + authentic Kerala dinner onboard</li>
-        <li><strong>Evening:</strong> Anchor at scenic riverside spot ~5:30 PM for sunset views</li>
-        <li><strong>Overnight:</strong> Stay on deluxe houseboat with comfortable beds & private bathroom</li>
-        <li><strong>Next Morning:</strong> Sunrise cruise + breakfast → Check-out ~9:00–9:30 AM</li>
+        <li>12:00 Noon check-in</li>
+        <li>Punnamada → Vembanad → Kainakary canals</li>
+        <li>Lunch, tea, Kerala dinner onboard</li>
+        <li>Sunset anchoring & overnight stay</li>
+        <li>Morning cruise + breakfast • ~9:30 AM checkout</li>
       </ul>
     </div>
 
-    <h3>3. 2 Nights Premium Houseboat Package – Complete Alleppey Backwater Experience</h3>
+    <h3>3. 2 Nights Premium • ~45–48 Hours</h3>
     <div class="itinerary">
-      <p><strong>Best for:</strong> Families, groups, in-depth Kerala backwater exploration</p>
-      <p><strong>Duration:</strong> ~45–48 hours | <strong>Price:</strong> Approx ₹32,000 total (private boat)</p>
+      <strong>₹32,000 total • Private boat</strong><br><br>
       <ul>
-        <li><strong>Day 1:</strong> Check-in 12:00 Noon → Cruise Vembanad Lake & Pamba River → Overnight in peaceful spot</li>
-        <li><strong>Day 2:</strong> Full day in Kuttanad region (Rice Bowl of Kerala) – deeper canals, village walks, optional canoe ride, local life</li>
-        <li><strong>Meals:</strong> All 3 meals/day + evening snacks – fresh Kerala cuisine</li>
-        <li><strong>Highlights:</strong> Multiple sunsets/sunrises, bird watching, traditional Kerala culture</li>
-        <li><strong>Day 3:</strong> Morning cruise + breakfast → Check-out ~9:00 AM</li>
+        <li>Day 1: Vembanad & Pamba River cruise</li>
+        <li>Day 2: Kuttanad deep backwaters + village life</li>
+        <li>All meals included • multiple sunsets/sunrises</li>
+        <li>Day 3: Morning cruise + breakfast • ~9:00 AM checkout</li>
       </ul>
     </div>
 
-    <h2>Secure Booking Form</h2>
+    <h2>Booking Details</h2>
 
     <form id="bookingForm">
-      <label for="package">Select Your Alleppey Houseboat Package</label>
+      <label for="package">Choose Your Package</label>
       <select id="package" name="package" required>
-        <option value="">-- Select Package --</option>
-        <option value="day" data-price="12000">Day Cruise (6-7 hrs) – Approx ₹12,000 total</option>
-        <option value="1night" data-price="15000">1 Night Deluxe – Approx ₹15,000 total</option>
-        <option value="2nights" data-price="32000">2 Nights Premium – Approx ₹32,000 total</option>
+        <option value="">Select package…</option>
+        <option value="day" data-price="12000">Day Cruise – ₹12,000</option>
+        <option value="1night" data-price="15000">1 Night Deluxe – ₹15,000</option>
+        <option value="2nights" data-price="32000">2 Nights Premium – ₹32,000</option>
       </select>
 
-      <label for="totalPeople">Total Number of Travellers (Adults + Children)</label>
-      <input type="number" id="totalPeople" min="1" max="12" value="2" required>
+      <label for="totalPeople">Number of Travellers</label>
+      <input type="number" id="totalPeople" min="1" max="12" value="2" required/>
 
       <div class="passenger-section">
-        <h2>Passenger Details</h2>
+        <h2>Passenger Information</h2>
         <div id="passengersContainer" class="passenger-grid"></div>
       </div>
 
-      <label for="primaryContact">Primary Contact (Phone / Email)</label>
-      <input type="text" id="primaryContact" name="primaryContact" required placeholder="+91... or email@example.com">
+      <label for="primaryContact">Primary Contact</label>
+      <input type="text" id="primaryContact" name="primaryContact" required placeholder="Phone or Email"/>
 
-      <label for="dates">Preferred Travel Dates & Special Requests</label>
-      <textarea id="dates" name="dates" rows="3" placeholder="e.g., 15-17 January 2026, vegetarian meals, pickup from Kochi/Alleppey..."></textarea>
+      <label for="dates">Travel Dates & Requests</label>
+      <textarea id="dates" name="dates" rows="3" placeholder="Preferred dates, dietary needs, pickup location..."></textarea>
 
-      <div class="total-price" id="totalPrice">Estimated Total: ₹0 (Private boat basis)</div>
+      <div class="total-price" id="totalPrice">Total: ₹0 (private boat rate)</div>
 
-      <button type="button" id="payButton" class="pay-btn" disabled>Proceed to Secure Payment</button>
+      <button type="button" id="payButton" class="pay-btn" disabled>
+        Proceed to Payment
+      </button>
     </form>
 
     <p class="note">
-      All prices approximate (fixed per boat, excl. 5% GST & seasonal variations). Secure payment via Razorpay.<br>
-      Routes and timings weather-dependent. We confirm dates & availability within 24 hours.
+      Prices are approximate per boat (excl. 5% GST) • Secure payment via Razorpay<br>
+      Final confirmation within 24 hours • Routes weather dependent
     </p>
   </div>
 </div>
 
 <script>
-  const MAX_AGE = 122;
+const MAX_AGE = 122;
 
-  const packageSelect = document.getElementById('package');
-  const totalPeopleInput = document.getElementById('totalPeople');
-  const passengersContainer = document.getElementById('passengersContainer');
-  const totalDisplay = document.getElementById('totalPrice');
-  const payBtn = document.getElementById('payButton');
+const packageSelect = document.getElementById('package');
+const totalPeopleInput = document.getElementById('totalPeople');
+const passengersContainer = document.getElementById('passengersContainer');
+const totalDisplay = document.getElementById('totalPrice');
+const payBtn = document.getElementById('payButton');
 
-  const paymentLinks = {
-    day: "https://rzp.io/l/YOUR_DAY_CRUISE_LINK",
-    '1night': "https://rzp.io/l/YOUR_1NIGHT_DELUXE_LINK",
-    '2nights': "https://rzp.io/l/YOUR_2NIGHTS_PREMIUM_LINK"
-  };
+const paymentLinks = {
+  day:     "https://rzp.io/l/YOUR_DAY_LINK",
+  '1night': "https://rzp.io/l/YOUR_1NIGHT_LINK",
+  '2nights':"https://rzp.io/l/YOUR_2NIGHTS_LINK"
+};
 
-  function updatePassengers() {
-    const count = parseInt(totalPeopleInput.value) || 1;
-    passengersContainer.innerHTML = '';
+function updatePassengers() {
+  const count = Math.max(1, parseInt(totalPeopleInput.value) || 1);
+  passengersContainer.innerHTML = '';
 
-    for (let i = 1; i <= count; i++) {
-      const div = document.createElement('div');
-      div.innerHTML = `
-        <strong>Passenger ${i}</strong>
-        <input type="text" placeholder="Full Name*" required name="p${i}_name">
-        <div style="position: relative;">
-          <input type="number" placeholder="Age*" min="1" max="${MAX_AGE}" required name="p${i}_age" class="age-input">
-          <span class="error-message" id="ageError${i}">Age must be between 1 and ${MAX_AGE}</span>
-        </div>
-        <select required name="p${i}_gender">
-          <option value="">Gender*</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Transgender">Transgender</option>
-        </select>
-        <select name="p${i}_nationality">
-          <option value="Indian">Indian</option>
-          <option value="Foreign">Foreign</option>
-        </select>
-      `;
-      passengersContainer.appendChild(div);
-    }
-
-    // Real-time age validation
-    document.querySelectorAll('.age-input').forEach(input => {
-      input.addEventListener('input', function() {
-        const value = parseInt(this.value);
-        const errorEl = this.nextElementSibling;
-        if (isNaN(value) || value < 1 || value > MAX_AGE) {
-          this.classList.add('error');
-          errorEl.style.display = 'block';
-        } else {
-          this.classList.remove('error');
-          errorEl.style.display = 'none';
-        }
-      });
-    });
-
-    updatePrice();
+  for (let i = 1; i <= count; i++) {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <strong>Passenger ${i}</strong>
+      <input type="text" placeholder="Full Name*" required name="p${i}_name">
+      <div style="position:relative;">
+        <input type="number" placeholder="Age*" min="1" max="${MAX_AGE}" required 
+               class="age-input" name="p${i}_age">
+        <span class="error-message">Age: 1 – ${MAX_AGE} years</span>
+      </div>
+      <select required name="p${i}_gender">
+        <option value="">Gender *</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="T">Transgender</option>
+      </select>
+      <select name="p${i}_nationality">
+        <option value="Indian">Indian</option>
+        <option value="Other">Other</option>
+      </select>
+    `;
+    passengersContainer.appendChild(div);
   }
 
-  function updatePrice() {
-    const pkg = packageSelect.value;
-    if (!pkg) {
-      totalDisplay.textContent = "Estimated Total: ₹0 (Private boat basis)";
-      payBtn.disabled = true;
-      return;
-    }
-
-    const basePrice = parseInt(packageSelect.options[packageSelect.selectedIndex].dataset.price);
-    totalDisplay.textContent = `Estimated Total: ₹${basePrice.toLocaleString()} (for up to ${totalPeopleInput.value} people)`;
-    payBtn.disabled = false;
-  }
-
-  function validateAges() {
-    let valid = true;
-    document.querySelectorAll('.age-input').forEach(input => {
-      const value = parseInt(input.value);
-      if (isNaN(value) || value < 1 || value > MAX_AGE) {
-        valid = false;
-        input.classList.add('error');
-        input.nextElementSibling.style.display = 'block';
+  // Real-time age validation
+  document.querySelectorAll('.age-input').forEach(el => {
+    el.addEventListener('input', function() {
+      const v = parseInt(this.value);
+      const err = this.nextElementSibling;
+      if (isNaN(v) || v < 1 || v > MAX_AGE) {
+        this.classList.add('error');
+        err.style.display = 'block';
+      } else {
+        this.classList.remove('error');
+        err.style.display = 'none';
       }
     });
-    return valid;
-  }
-
-  packageSelect.addEventListener('change', updatePassengers);
-  totalPeopleInput.addEventListener('input', updatePassengers);
-
-  payBtn.addEventListener('click', () => {
-    if (!validateAges()) {
-      alert("Please enter valid ages for all passengers (1 to 122 years).");
-      return;
-    }
-
-    const pkg = packageSelect.value;
-    if (paymentLinks[pkg]) {
-      window.open(paymentLinks[pkg], '_blank');
-    } else {
-      alert("Payment link not configured. Contact us!");
-    }
   });
 
-  updatePassengers();
-</script>
+  updatePrice();
+}
 
+function updatePrice() {
+  if (!packageSelect.value) {
+    totalDisplay.textContent = "Total: ₹0 (private boat rate)";
+    payBtn.disabled = true;
+    return;
+  }
+
+  const price = parseInt(packageSelect.selectedOptions[0].dataset.price);
+  totalDisplay.textContent = `Total: ₹${price.toLocaleString()} (private boat)`;
+  payBtn.disabled = false;
+}
+
+function allAgesValid() {
+  let ok = true;
+  document.querySelectorAll('.age-input').forEach(input => {
+    const v = parseInt(input.value);
+    if (isNaN(v) || v < 1 || v > MAX_AGE) {
+      ok = false;
+      input.classList.add('error');
+      input.nextElementSibling.style.display = 'block';
+    }
+  });
+  return ok;
+}
+
+packageSelect.onchange = updatePassengers;
+totalPeopleInput.oninput = updatePassengers;
+
+// Scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.content-box').forEach(box => observer.observe(box));
+
+// Payment
+payBtn.onclick = () => {
+  if (!allAgesValid()) {
+    alert("Please correct the age fields (1–122 years).");
+    return;
+  }
+  const pkg = packageSelect.value;
+  if (paymentLinks[pkg]) {
+    payBtn.textContent = "Redirecting...";
+    payBtn.disabled = true;
+    setTimeout(() => window.open(paymentLinks[pkg], '_blank'), 600);
+  } else {
+    alert("Payment gateway not configured yet.");
+  }
+};
+
+updatePassengers();
+</script>
 </body>
 </html>

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alleppey Houseboat Booking 2026 • Mannakuzhil Tours</title>
   <meta name="description" content="Book your private Alleppey houseboat experience with detailed itineraries: day cruise, 1-night deluxe & 2-night premium packages. Secure payment • Authentic Kerala backwaters."/>
+  <meta name="keywords" content="Alleppey houseboat booking, Alleppey backwater cruise, Kerala houseboat package, 1 night houseboat Alleppey, Vembanad Lake houseboat, Kerala backwater tour 2026"/>
+  
   <link rel="icon" type="image/png" href="logo-square.png"/>
   
   <style>
@@ -15,7 +17,7 @@
       --error-red: #d32f2f;
       --text: #1a3c34;
       --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #2e7d32 100%);
-      --card-bg: rgba(255,255,255,0.92);
+      --card-bg: rgba(255,255,255,0.94);
       --shadow-sm: 0 4px 15px rgba(0,0,0,0.08);
       --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
     }
@@ -77,18 +79,26 @@
       border-radius: 16px;
       box-shadow: var(--shadow-lg);
       margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: all 1s ease-out;
+    }
+
+    .hero-img.loaded {
+      opacity: 1;
+      transform: scale(1);
     }
 
     .content-box {
       background: var(--card-bg);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
       border-radius: 20px;
       padding: 2.5rem;
       box-shadow: var(--shadow-lg);
       margin-bottom: 3rem;
       opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
+      transform: translateY(40px);
+      transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .content-box.visible {
@@ -96,15 +106,20 @@
       transform: translateY(0);
     }
 
-    h2 { color: var(--green-dark); margin-bottom: 1.2rem; font-size: 1.8rem; }
-    h3 { color: var(--green-main); margin: 2rem 0 1rem; font-size: 1.45rem; }
+    h2 { color: var(--green-dark); margin-bottom: 1.2rem; font-size: 1.9rem; font-weight: 700; }
+    h3 { color: var(--green-main); margin: 2rem 0 1rem; font-size: 1.5rem; }
 
     .itinerary {
-      background: rgba(232,245,233,0.7);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin: 1.2rem 0;
+      background: rgba(232,245,233,0.75);
+      border-radius: 14px;
+      padding: 1.6rem;
+      margin: 1.3rem 0;
       border: 1px solid var(--green-light);
+      transition: transform 0.3s ease;
+    }
+
+    .itinerary:hover {
+      transform: translateY(-4px);
     }
 
     ul { padding-left: 1.6rem; margin: 0.8rem 0; }
@@ -112,14 +127,14 @@
 
     form label {
       font-weight: 600;
-      margin: 1.2rem 0 0.5rem;
+      margin: 1.3rem 0 0.6rem;
       display: block;
       font-size: 0.98rem;
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.9rem;
+      padding: 0.95rem;
       border: 1px solid #c8e6c9;
       border-radius: 10px;
       font-size: 1rem;
@@ -129,7 +144,7 @@
     input:focus, select:focus, textarea:focus {
       outline: none;
       border-color: var(--green-main);
-      box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
+      box-shadow: 0 0 0 3px rgba(46,125,50,0.18);
     }
 
     input.error {
@@ -139,55 +154,55 @@
 
     .error-message {
       color: var(--error-red);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       margin-top: 0.3rem;
       display: none;
     }
 
     .passenger-section {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: rgba(255,255,255,0.6);
-      border-radius: 12px;
+      margin: 2.2rem 0;
+      padding: 1.8rem;
+      background: rgba(255,255,255,0.65);
+      border-radius: 14px;
       border: 1px solid var(--green-light);
     }
 
     .passenger-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
+      gap: 1.4rem;
     }
 
     .total-price {
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 700;
       color: var(--green-dark);
       text-align: center;
-      padding: 1.2rem;
+      padding: 1.3rem;
       background: var(--green-light);
       border-radius: 12px;
-      margin: 2rem 0;
+      margin: 2.2rem 0;
     }
 
     .pay-btn {
       background: var(--green-main);
       color: white;
       border: none;
-      padding: 1.1rem 3rem;
-      font-size: 1.2rem;
+      padding: 1.2rem 3.5rem;
+      font-size: 1.25rem;
       font-weight: 700;
       border-radius: 50px;
       cursor: pointer;
       display: block;
-      margin: 2.5rem auto 0;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(46,125,50,0.3);
+      margin: 2.8rem auto 0;
+      transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 6px 20px rgba(46,125,50,0.35);
     }
 
     .pay-btn:hover:not(:disabled) {
       background: var(--green-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(46,125,50,0.45);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 14px 35px rgba(46,125,50,0.5);
     }
 
     .pay-btn:disabled {
@@ -197,15 +212,17 @@
     }
 
     .note {
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       color: #444;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 2.2rem;
+      opacity: 0.9;
     }
 
     @media (max-width: 768px) {
       .wrapper { padding: 1.2rem; }
-      .content-box { padding: 1.8rem; }
+      .content-box { padding: 2rem; }
+      .pay-btn { padding: 1rem 2.5rem; font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -217,9 +234,10 @@
     <h1>Alleppey Houseboat Booking</h1>
   </header>
 
-  <img class="hero-img"
-       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=90"
-       alt="Traditional Kerala houseboat cruising through serene Alleppey backwaters">
+  <img class="hero-img" 
+       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=90" 
+       alt="Traditional Kerala houseboat cruising through serene Alleppey backwaters" 
+       onload="this.classList.add('loaded')">
 
   <div class="content-box">
     <h2>Private Alleppey Houseboat Experiences • 2026</h2>
@@ -342,7 +360,6 @@ function updatePassengers() {
     passengersContainer.appendChild(div);
   }
 
-  // Real-time age validation
   document.querySelectorAll('.age-input').forEach(el => {
     el.addEventListener('input', function() {
       const v = parseInt(this.value);
@@ -388,14 +405,14 @@ function allAgesValid() {
 packageSelect.onchange = updatePassengers;
 totalPeopleInput.oninput = updatePassengers;
 
-// Scroll reveal animation
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll('.content-box').forEach(box => observer.observe(box));
 
@@ -409,7 +426,11 @@ payBtn.onclick = () => {
   if (paymentLinks[pkg]) {
     payBtn.textContent = "Redirecting...";
     payBtn.disabled = true;
-    setTimeout(() => window.open(paymentLinks[pkg], '_blank'), 600);
+    setTimeout(() => {
+      window.open(paymentLinks[pkg], '_blank');
+      payBtn.textContent = "Proceed to Payment";
+      payBtn.disabled = false;
+    }, 700);
   } else {
     alert("Payment gateway not configured yet.");
   }

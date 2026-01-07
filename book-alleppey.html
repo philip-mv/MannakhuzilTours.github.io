@@ -4,22 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alleppey Houseboat Booking 2026 • Mannakuzhil Tours</title>
-  <meta name="description" content="Book your private Alleppey houseboat experience with detailed itineraries: day cruise, 1-night deluxe & 2-night premium packages. Secure payment • Authentic Kerala backwaters."/>
-  <meta name="keywords" content="Alleppey houseboat booking, Alleppey backwater cruise, Kerala houseboat package, 1 night houseboat Alleppey, Vembanad Lake houseboat, Kerala backwater tour 2026"/>
+  <meta name="description" content="Book your private Alleppey houseboat cruise with full itinerary: day trip, 1-night deluxe & 2-night premium. Secure payment • Serene Kerala backwaters."/>
+  <meta name="keywords" content="Alleppey houseboat booking, Kerala backwater cruise, Alleppey houseboat package, Vembanad Lake houseboat, Kerala houseboat tour 2026"/>
   
   <link rel="icon" type="image/png" href="logo-square.png"/>
   
   <style>
     :root {
-      --green-main: #2e7d32;
-      --green-dark: #1b5e20;
-      --green-light: #e8f5e9;
-      --error-red: #d32f2f;
-      --text: #1a3c34;
-      --bg-gradient: linear-gradient(135deg, #a5d6a7 0%, #2e7d32 100%);
-      --card-bg: rgba(255,255,255,0.94);
-      --shadow-sm: 0 4px 15px rgba(0,0,0,0.08);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+      --primary:      #2e7d32;       /* Main green – Kerala forest */
+      --primary-dark: #1b5e20;
+      --primary-light:#e8f5e9;
+      --accent-blue:  #1e88e5;       /* Backwater blue */
+      --blue-dark:    #1565c0;
+      --blue-light:   #e3f2fd;
+      --bg-gradient:  linear-gradient(135deg, #bbdefb 0%, #a5d6a7 50%, #2e7d32 100%);
+      --text:         #0d47a1;       /* Deep blue-green text */
+      --card-bg:      rgba(255,255,255,0.95);
+      --error-red:    #d32f2f;
+      --shadow-sm:    0 4px 15px rgba(0,0,0,0.08);
+      --shadow-lg:    0 12px 40px rgba(0,0,0,0.14);
     }
 
     * {
@@ -52,7 +55,7 @@
 
     .back-link {
       color: white;
-      background: rgba(27,94,32,0.85);
+      background: rgba(30,136,229,0.85);
       padding: 0.5rem 1.1rem;
       border-radius: 50px;
       text-decoration: none;
@@ -61,7 +64,7 @@
     }
 
     .back-link:hover {
-      background: var(--green-dark);
+      background: var(--blue-dark);
       transform: translateY(-1px);
     }
 
@@ -69,7 +72,7 @@
       font-size: clamp(1.8rem, 5vw, 2.5rem);
       color: white;
       font-weight: 800;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      text-shadow: 0 2px 10px rgba(0,0,0,0.45);
     }
 
     .hero-img {
@@ -80,7 +83,7 @@
       box-shadow: var(--shadow-lg);
       margin-bottom: 2.5rem;
       opacity: 0;
-      transform: scale(0.95);
+      transform: scale(0.96);
       transition: all 1s ease-out;
     }
 
@@ -106,20 +109,21 @@
       transform: translateY(0);
     }
 
-    h2 { color: var(--green-dark); margin-bottom: 1.2rem; font-size: 1.9rem; font-weight: 700; }
-    h3 { color: var(--green-main); margin: 2rem 0 1rem; font-size: 1.5rem; }
+    h2 { color: var(--primary-dark); margin-bottom: 1.2rem; font-size: 1.9rem; font-weight: 700; }
+    h3 { color: var(--accent-blue); margin: 2rem 0 1rem; font-size: 1.5rem; }
 
     .itinerary {
-      background: rgba(232,245,233,0.75);
+      background: rgba(227,242,253,0.75);
       border-radius: 14px;
       padding: 1.6rem;
       margin: 1.3rem 0;
-      border: 1px solid var(--green-light);
-      transition: transform 0.3s ease;
+      border: 1px solid #bbdefb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .itinerary:hover {
       transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(30,136,229,0.2);
     }
 
     ul { padding-left: 1.6rem; margin: 0.8rem 0; }
@@ -135,7 +139,7 @@
     input, select, textarea {
       width: 100%;
       padding: 0.95rem;
-      border: 1px solid #c8e6c9;
+      border: 1px solid #bbdefb;
       border-radius: 10px;
       font-size: 1rem;
       transition: all 0.25s ease;
@@ -143,8 +147,8 @@
 
     input:focus, select:focus, textarea:focus {
       outline: none;
-      border-color: var(--green-main);
-      box-shadow: 0 0 0 3px rgba(46,125,50,0.18);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(30,136,229,0.2);
     }
 
     input.error {
@@ -162,9 +166,9 @@
     .passenger-section {
       margin: 2.2rem 0;
       padding: 1.8rem;
-      background: rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.72);
       border-radius: 14px;
-      border: 1px solid var(--green-light);
+      border: 1px solid #bbdefb;
     }
 
     .passenger-grid {
@@ -176,16 +180,16 @@
     .total-price {
       font-size: 1.55rem;
       font-weight: 700;
-      color: var(--green-dark);
+      color: var(--primary);
       text-align: center;
       padding: 1.3rem;
-      background: var(--green-light);
+      background: var(--blue-light);
       border-radius: 12px;
       margin: 2.2rem 0;
     }
 
     .pay-btn {
-      background: var(--green-main);
+      background: linear-gradient(90deg, var(--accent-blue), var(--primary));
       color: white;
       border: none;
       padding: 1.2rem 3.5rem;
@@ -196,13 +200,13 @@
       display: block;
       margin: 2.8rem auto 0;
       transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      box-shadow: 0 6px 20px rgba(46,125,50,0.35);
+      box-shadow: 0 6px 20px rgba(30,136,229,0.35);
     }
 
     .pay-btn:hover:not(:disabled) {
-      background: var(--green-dark);
       transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 14px 35px rgba(46,125,50,0.5);
+      box-shadow: 0 14px 35px rgba(30,136,229,0.5);
+      background: linear-gradient(90deg, var(--blue-dark), var(--primary-dark));
     }
 
     .pay-btn:disabled {
@@ -234,14 +238,14 @@
     <h1>Alleppey Houseboat Booking</h1>
   </header>
 
-  <img class="hero-img" 
-       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=90" 
-       alt="Traditional Kerala houseboat cruising through serene Alleppey backwaters" 
+  <img class="hero-img"
+       src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=90"
+       alt="Traditional Kerala houseboat cruising through blue-green backwaters"
        onload="this.classList.add('loaded')">
 
   <div class="content-box">
     <h2>Private Alleppey Houseboat Experiences • 2026</h2>
-    <p>All packages are on exclusive kettuvallam houseboats with private crew, authentic Kerala cuisine & scenic backwater routes.</p>
+    <p>Exclusive kettuvallam cruises with private crew, authentic Kerala cuisine & breathtaking backwater views.</p>
 
     <h3>1. Day Cruise • 6–7 Hours</h3>
     <div class="itinerary">
@@ -249,8 +253,8 @@
       <ul>
         <li>11:00 AM check-in • Pallathuruthy / Finishing Point</li>
         <li>Vembanad & Punnamada Lake cruise</li>
-        <li>Palm canals, village life, coir making</li>
-        <li>Onboard Kerala lunch</li>
+        <li>Palm-lined canals, village scenes, coir making</li>
+        <li>Onboard Kerala-style lunch</li>
         <li>~5:00–5:30 PM finish</li>
       </ul>
     </div>
@@ -260,8 +264,8 @@
       <strong>₹15,000 total • Private boat</strong><br><br>
       <ul>
         <li>12:00 Noon check-in</li>
-        <li>Punnamada → Vembanad → Kainakary canals</li>
-        <li>Lunch, tea, Kerala dinner onboard</li>
+        <li>Punnamada → Vembanad → Kainakary narrow canals</li>
+        <li>Lunch, tea, authentic Kerala dinner onboard</li>
         <li>Sunset anchoring & overnight stay</li>
         <li>Morning cruise + breakfast • ~9:30 AM checkout</li>
       </ul>
@@ -272,8 +276,8 @@
       <strong>₹32,000 total • Private boat</strong><br><br>
       <ul>
         <li>Day 1: Vembanad & Pamba River cruise</li>
-        <li>Day 2: Kuttanad deep backwaters + village life</li>
-        <li>All meals included • multiple sunsets/sunrises</li>
+        <li>Day 2: Deep Kuttanad backwaters + village exploration</li>
+        <li>All meals included • stunning sunsets/sunrises</li>
         <li>Day 3: Morning cruise + breakfast • ~9:00 AM checkout</li>
       </ul>
     </div>
@@ -312,7 +316,7 @@
 
     <p class="note">
       Prices are approximate per boat (excl. 5% GST) • Secure payment via Razorpay<br>
-      Final confirmation within 24 hours • Routes weather dependent
+      Confirmation within 24 hours • Routes weather dependent
     </p>
   </div>
 </div>
@@ -405,7 +409,7 @@ function allAgesValid() {
 packageSelect.onchange = updatePassengers;
 totalPeopleInput.oninput = updatePassengers;
 
-// Scroll reveal
+// Scroll reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -416,7 +420,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.content-box').forEach(box => observer.observe(box));
 
-// Payment
+// Payment handler
 payBtn.onclick = () => {
   if (!allAgesValid()) {
     alert("Please correct the age fields (1–122 years).");

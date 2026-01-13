@@ -2,524 +2,480 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mannakuzhil Tours – Kerala Tour Packages & Backwater Trips</title>
-  <meta name="description" content="Mannakuzhil Tours offers Kerala tour packages, backwater cruises, Munnar trips, Wayanad holidays and customized itineraries etc.">
-  <!-- Modern standard + fallback for GitHub Pages -->
-<link rel="icon" type="image/png" sizes="32x32" href="logo-square.png">
-<link rel="icon" type="image/png" sizes="16x16" href="logo-square.png">
-<link rel="shortcut icon" href="logo-square.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mannakuzhil Tours – Best Kerala Tour Packages, Backwaters & Hill Stations 2026</title>
+  <meta name="description" content="Discover Kerala with Mannakuzhil Tours: authentic backwater houseboat cruises, Munnar tea gardens, Wayanad wildlife, Kovalam beaches & customized Kerala holidays.">
+  <meta name="keywords" content="Kerala tour packages, Alleppey houseboat, Munnar tour, Wayanad holiday, Kovalam beach package, Kerala backwater cruise, Munnar honeymoon, Kerala Ayurveda, Kerala travel agency">
+  <!-- Open Graph for better social sharing -->
+  <meta property="og:title" content="Mannakuzhil Tours – Best Kerala Tour Packages 2026">
+  <meta property="og:description" content="Experience Kerala’s backwaters, hills, beaches & culture with personalized tours and houseboat cruises.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1200">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mannakuzhiltours.com">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-square.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo-square.png">
+  <link rel="shortcut icon" href="logo-square.png">
+
   <style>
-  :root {
-    --green-main: #2e7d32;
-    --green-dark: #145214;
-    --green-light: #d0e8d7;
-    --card-bg: rgba(240, 251, 240, 0.98);
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #70c1ff 0%, #2e7d32 50%, #145214 100%);
-    color: #1a3d27;
-    overflow-x: hidden;
-  }
-  .page-transition {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .page-transition.fade-out {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  h1, h2, h3 {
-    margin: 0;
-  }
-  h2 {
-    color: #fff !important;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    font-weight: 800;
-  }
-  h2::before {
-    font-size: clamp(1.8rem, 5vw, 2.2rem);
-    margin-right: 12px;
-    display: inline-block;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
-    color: #4caf50;
-  }
-
-  /* NEW: Fixed header with scroll effects */
-  .header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-  }
-
-  .header-container.scrolled {
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  }
-
-  header {
-    background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(56,142,60,0.98));
-    color: #daf5d6;
-    padding: 20px 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    backdrop-filter: blur(12px);
-    transition: padding 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Animated gradient background on header */
-  header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: headerShine 8s linear infinite;
-  }
-
-  @keyframes headerShine {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-
-  .header-container.scrolled header {
-    padding: 14px 20px;
-  }
-
-  header .logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    object-fit: contain;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border: 2px solid rgba(255,255,255,0.3);
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-  }
-
-  .header-container.scrolled .logo {
-    width: 45px;
-    height: 45px;
-    transform: rotate(360deg);
-  }
-
-  header .logo:hover {
-    transform: scale(1.1) rotate(5deg);
-  }
-
-  header .title {
-    font-size: clamp(1.4rem, 3.5vw, 1.7rem);
-    font-weight: 800;
-    letter-spacing: 1.2px;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-  }
-
-  .header-container.scrolled .title {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-  }
-
-  nav {
-    background: rgba(56, 142, 60, 0.97);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 14px;
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    position: relative;
-  }
-
-  /* Progress bar showing scroll position */
-  nav::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7);
-    width: 0%;
-    transition: width 0.1s ease;
-  }
-
-  nav a {
-    color: #eaf6e0;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 25px;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    font-weight: 700;
-    position: relative;
-    min-width: 80px;
-    text-align: center;
-  }
-  
-  /* Ripple effect on nav click */
-  nav a::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.5s, height 0.5s;
-  }
-  
-  nav a:active::before {
-    width: 300px;
-    height: 300px;
-  }
-  
-  nav a::after {
-    content: "";
-    position: absolute;
-    left: 15%;
-    right: 15%;
-    bottom: -4px;
-    height: 3px;
-    background: linear-gradient(90deg, #e8f5e9, #a5d6a7, #4caf50);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 2px;
-  }
-  nav a:hover::after,
-  nav a.active::after {
-    transform: scaleX(1);
-  }
-  nav a:hover,
-  nav a.active {
-    background: linear-gradient(135deg, #a5d6a7, #81c784);
-    color: var(--green-dark);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    padding-top: 160px;
-  }
-
-  .hero {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
-                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85');
-    background-size: cover;
-    background-position: center;
-    min-height: clamp(260px, 35vh, 340px);
-    color: #daf5d6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    font-weight: 800;
-    text-shadow: 3px 3px 12px rgba(0,0,0,0.8);
-    border-radius: 24px;
-    margin-bottom: 36px;
-    padding: 32px 24px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  }
-  .hero-title {
-    animation: floatHero 5s ease-in-out infinite;
-    background: linear-gradient(135deg, #fff 0%, #e8f5e9 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  @keyframes floatHero {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-8px) scale(1.02); }
-  }
-  .hero::after {
-    content:"";
-    position:absolute;
-    inset:0;
-    background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 60%);
-    mix-blend-mode: screen;
-    opacity:0;
-    animation: heroGlow 7s ease-in-out infinite alternate;
-    pointer-events:none;
-  }
-  @keyframes heroGlow {
-    0% {opacity:0; transform: scale(1);}
-    50% {opacity:0.7; transform: scale(1.1);}
-    100% {opacity:0.1; transform: scale(1);}
-  }
-  .section-box {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(16px);
-    padding: clamp(24px, 4vw, 32px);
-    border-radius: 24px;
-    box-shadow: 0 12px 40px rgba(0,60,0,0.2);
-    margin-bottom: 36px;
-    border: 1px solid rgba(255,255,255,0.3);
-  }
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  .places, .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: clamp(18px, 3vw, 24px);
-    justify-content: center;
-  }
-  .place-card, .service-card {
-    background: linear-gradient(135deg, var(--card-bg), rgba(208,232,215,0.9));
-    border-radius: 20px;
-    padding: clamp(20px, 3vw, 28px);
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(0,90,0,0.15);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(165,214,167,0.4);
-    flex: 1 1 clamp(260px, 45vw, 320px);
-    min-height: 420px;
-    cursor: pointer;
-  }
-  
-  /* Sparkle effect on hover */
-  .place-card:hover::after, .service-card:hover::after {
-    content: '✨';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    animation: sparkle 1s ease-in-out infinite;
-  }
-  
-  @keyframes sparkle {
-    0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
-    50% { opacity: 0.5; transform: scale(1.2) rotate(180deg); }
-  }
-  .place-card::before, .service-card::before {
-    content:"";
-    position:absolute;
-    inset:0;
-    background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%);
-    opacity:0;
-    transition: opacity 0.4s ease;
-    pointer-events:none;
-  }
-  .place-card:hover, .service-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 20px 50px rgba(0,90,0,0.3);
-  }
-  .place-card:hover::before, .service-card:hover::before {
-    opacity:1;
-  }
-  .place-card img, .service-image img {
-    width: 100%;
-    height: clamp(160px, 25vw, 200px);
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 16px;
-    border: 4px solid #a5d6a7;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  }
-  .place-card:hover img, .service-card:hover .service-image img {
-    transform: scale(1.08) rotate(1deg);
-  }
-  .place-card h3, .service-card h3 {
-    margin: 12px 0 8px;
-    color: #1a3d27;
-    font-size: clamp(1.15rem, 3vw, 1.4rem);
-    font-weight: 800;
-  }
-  .place-card p, .service-card p {
-    flex-grow: 1;
-    color: #2e4d30;
-    font-size: clamp(0.95rem, 2.5vw, 1rem);
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--green-main), var(--green-dark));
-    color: #daf5d6 !important;
-    border: none;
-    border-radius: 50px;
-    padding: clamp(12px, 3vw, 16px) clamp(24px, 5vw, 32px);
-    font-size: clamp(1rem, 2.8vw, 1.1rem);
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 8px 24px rgba(46,125,50,0.4);
-    letter-spacing: 0.5px;
-    position: relative;
-    overflow: hidden;
-    touch-action: manipulation;
-    min-height: clamp(48px, 8vw, 56px);
-    width: 100%;
-    margin-top: auto;
-  }
-  .btn-primary::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.6s;
-  }
-  .btn-primary:hover::before {
-    left: 100%;
-  }
-  .btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 32px rgba(46,125,50,0.5);
-  }
-  .btn-primary:active {
-    transform: translateY(0) scale(0.98);
-    box-shadow: 0 4px 16px rgba(46,125,50,0.4);
-  }
-  .service-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #a5d6a7, #4caf50, #a5d6a7);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
-  }
-  .service-card:hover::before {
-    transform: scaleX(1);
-  }
-  .service-image {
-    margin-top: 16px;
-  }
-  #about p {
-    margin-top: 8px;
-    text-align: center;
-    font-size: clamp(1rem, 2.5vw, 1.05rem);
-    line-height: 1.7;
-  }
-  #contact .contact-info {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .contact-link {
-    color: #daf5d6 !important;
-    font-weight: 700;
-    font-size: clamp(1rem, 3vw, 1.1rem);
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 12px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: inline-block;
-    position: relative;
-    background: linear-gradient(135deg, #a5d6a7, #81c784);
-    border: 2px solid rgba(46,125,50,0.3);
-    margin: 8px 0;
-    min-width: clamp(280px, 70vw, 320px);
-    box-shadow: 0 8px 24px rgba(46,125,50,0.3);
-  }
-  .contact-link:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(46,125,50,0.4);
-  }
-  footer {
-    background: linear-gradient(135deg, var(--green-dark), #1b5e20);
-    color: #daf5d6;
-    text-align: center;
-    padding: 24px 20px;
-    font-size: clamp(0.95rem, 2.5vw, 1rem);
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    border-radius: 24px 24px 0 0;
-    margin-top: 40px;
-    box-shadow: 0 -8px 32px rgba(0,0,0,0.2);
-  }
-  @media (min-width: 769px) {
-    .place-card {
-      transform-style: preserve-3d;
+    :root {
+      --green-main: #2e7d32;
+      --green-dark: #145214;
+      --green-light: #d0e8d7;
+      --card-bg: rgba(240, 251, 240, 0.98);
     }
-    .places {
-      gap: 24px;
+    * {
+      box-sizing: border-box;
     }
-    .place-card, .service-card {
-      min-height: 480px;
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #70c1ff 0%, #2e7d32 50%, #145214 100%);
+      color: #1a3d27;
+      overflow-x: hidden;
     }
-  }
-  @media (max-width: 768px) {
-    main {
-      padding: 20px 12px;
-      padding-top: 150px;
+    .page-transition {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-    .places, .services-grid {
-      flex-direction: column;
-      gap: 24px;
+    .page-transition.fade-out {
+      opacity: 0;
+      transform: translateY(12px);
     }
-    .place-card, .service-card {
-      max-width: 100%;
-      min-height: 460px;
+    h1, h2, h3 {
+      margin: 0;
+    }
+    h2 {
+      color: #fff !important;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      font-weight: 800;
+    }
+    h2::before {
+      content: '';
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      margin-right: 12px;
+      display: inline-block;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+      color: #4caf50;
+    }
+    .header-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    .header-container.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    header {
+      background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(56,142,60,0.98));
+      color: #daf5d6;
+      padding: 20px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      backdrop-filter: blur(12px);
+      transition: padding 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: headerShine 8s linear infinite;
+    }
+    @keyframes headerShine {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .header-container.scrolled header {
+      padding: 14px 20px;
+    }
+    header .logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .header-container.scrolled .logo {
+      width: 45px;
+      height: 45px;
+      transform: rotate(360deg);
+    }
+    header .logo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+    header .title {
+      font-size: clamp(1.4rem, 3.5vw, 1.7rem);
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    .header-container.scrolled .title {
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
     }
     nav {
-      gap: 6px;
-      padding: 10px 8px;
+      background: rgba(56, 142, 60, 0.97);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 14px;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      position: relative;
+    }
+    nav::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #4caf50, #81c784, #a5d6a7);
+      width: 0%;
+      transition: width 0.1s ease;
     }
     nav a {
-      padding: 8px 14px;
-      min-width: 70px;
+      color: #eaf6e0;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      font-weight: 700;
+      position: relative;
+      min-width: 80px;
+      text-align: center;
     }
-  }
-  @media (max-width: 480px) {
+    nav a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.5s, height 0.5s;
+    }
+    nav a:active::before {
+      width: 300px;
+      height: 300px;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 15%;
+      right: 15%;
+      bottom: -4px;
+      height: 3px;
+      background: linear-gradient(90deg, #e8f5e9, #a5d6a7, #4caf50);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border-radius: 2px;
+    }
+    nav a:hover::after,
+    nav a.active::after {
+      transform: scaleX(1);
+    }
+    nav a:hover,
+    nav a.active {
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      color: var(--green-dark);
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      padding-top: 160px;
+    }
     .hero {
-      margin-bottom: 28px;
-      padding: 24px 20px;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
+                  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=85');
+      background-size: cover;
+      background-position: center;
+      min-height: clamp(260px, 35vh, 340px);
+      color: #daf5d6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.8);
+      border-radius: 24px;
+      margin-bottom: 36px;
+      padding: 32px 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .hero-title {
+      animation: floatHero 5s ease-in-out infinite;
+      background: linear-gradient(135deg, #fff 0%, #e8f5e9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @keyframes floatHero {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-8px) scale(1.02); }
+    }
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.25), transparent 60%);
+      mix-blend-mode: screen;
+      opacity:0;
+      animation: heroGlow 7s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+    @keyframes heroGlow {
+      0% {opacity:0; transform: scale(1);}
+      50% {opacity:0.7; transform: scale(1.1);}
+      100% {opacity:0.1; transform: scale(1);}
     }
     .section-box {
-      padding: 24px 20px 28px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(16px);
+      padding: clamp(24px, 4vw, 32px);
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(0,60,0,0.2);
+      margin-bottom: 36px;
+      border: 1px solid rgba(255,255,255,0.3);
     }
-  }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .places, .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: clamp(18px, 3vw, 24px);
+      justify-content: center;
+    }
+    .place-card, .service-card {
+      background: linear-gradient(135deg, var(--card-bg), rgba(208,232,215,0.9));
+      border-radius: 20px;
+      padding: clamp(20px, 3vw, 28px);
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,90,0,0.15);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid rgba(165,214,167,0.4);
+      flex: 1 1 clamp(260px, 45vw, 320px);
+      min-height: 420px;
+      cursor: pointer;
+    }
+    .place-card:hover::after, .service-card:hover::after {
+      content: '✨';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      animation: sparkle 1s ease-in-out infinite;
+    }
+    @keyframes sparkle {
+      0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+      50% { opacity: 0.5; transform: scale(1.2) rotate(180deg); }
+    }
+    .place-card::before, .service-card::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%);
+      opacity:0;
+      transition: opacity 0.4s ease;
+      pointer-events:none;
+    }
+    .place-card:hover, .service-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(0,90,0,0.3);
+    }
+    .place-card:hover::before, .service-card:hover::before {
+      opacity:1;
+    }
+    .place-card img, .service-image img {
+      width: 100%;
+      height: clamp(160px, 25vw, 200px);
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      border: 4px solid #a5d6a7;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .place-card:hover img, .service-card:hover .service-image img {
+      transform: scale(1.08) rotate(1deg);
+    }
+    .place-card h3, .service-card h3 {
+      margin: 12px 0 8px;
+      color: #1a3d27;
+      font-size: clamp(1.15rem, 3vw, 1.4rem);
+      font-weight: 800;
+    }
+    .place-card p, .service-card p {
+      flex-grow: 1;
+      color: #2e4d30;
+      font-size: clamp(0.95rem, 2.5vw, 1rem);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: #daf5d6 !important;
+      border: none;
+      border-radius: 50px;
+      padding: clamp(12px, 3vw, 16px) clamp(24px, 5vw, 32px);
+      font-size: clamp(1rem, 2.8vw, 1.1rem);
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 8px 24px rgba(46,125,50,0.4);
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+      touch-action: manipulation;
+      min-height: clamp(48px, 8vw, 56px);
+      width: 100%;
+      margin-top: auto;
+    }
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s;
+    }
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 32px rgba(46,125,50,0.5);
+    }
+    .btn-primary:active {
+      transform: translateY(0) scale(0.98);
+      box-shadow: 0 4px 16px rgba(46,125,50,0.4);
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #a5d6a7, #4caf50, #a5d6a7);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .service-image {
+      margin-top: 16px;
+    }
+    #about p {
+      margin-top: 8px;
+      text-align: center;
+      font-size: clamp(1rem, 2.5vw, 1.05rem);
+      line-height: 1.7;
+    }
+    #contact .contact-info {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-link {
+      color: #daf5d6 !important;
+      font-weight: 700;
+      font-size: clamp(1rem, 3vw, 1.1rem);
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: inline-block;
+      position: relative;
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      border: 2px solid rgba(46,125,50,0.3);
+      margin: 8px 0;
+      min-width: clamp(280px, 70vw, 320px);
+      box-shadow: 0 8px 24px rgba(46,125,50,0.3);
+    }
+    .contact-link:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(46,125,50,0.4);
+    }
+    footer {
+      background: linear-gradient(135deg, var(--green-dark), #1b5e20);
+      color: #daf5d6;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: clamp(0.95rem, 2.5vw, 1rem);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 24px 24px 0 0;
+      margin-top: 40px;
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 769px) {
+      .place-card { transform-style: preserve-3d; }
+      .places { gap: 24px; }
+      .place-card, .service-card { min-height: 480px; }
+    }
+    @media (max-width: 768px) {
+      main { padding: 20px 12px; padding-top: 150px; }
+      .places, .services-grid { flex-direction: column; gap: 24px; }
+      .place-card, .service-card { max-width: 100%; min-height: 460px; }
+      nav { gap: 6px; padding: 10px 8px; }
+      nav a { padding: 8px 14px; min-width: 70px; }
+    }
+    @media (max-width: 480px) {
+      .hero { margin-bottom: 28px; padding: 24px 20px; }
+      .section-box { padding: 24px 20px 28px; }
+    }
   </style>
 </head>
- 
 <body class="page-transition">
   <div class="header-container" id="headerContainer">
     <header id="header">
-      <img src="logo-square.png" alt="Mannakuzhil Tours Logo" class="logo">
+      <img src="logo-square.png" alt="Mannakuzhil Tours Logo – Kerala Travel Agency" class="logo">
       <div class="title">Mannakuzhil Tours</div>
     </header>
     <nav id="nav">
@@ -533,112 +489,109 @@
 
   <main>
     <div class="hero reveal" id="home">
-      <span class="hero-title">Explore Kerala with Mannakuzhil Tours</span>
+      <span class="hero-title">Experience God's Own Country with Mannakuzhil Tours</span>
     </div>
+
     <section id="packages" class="section-box reveal">
-      <h2>🏞️ Tour Packages</h2>
+      <h2>🏞️ Explore Kerala Tour Packages</h2>
+      <p>From serene backwaters to misty hill stations, discover the best of Kerala with our handcrafted tour packages.</p>
       <div class="places">
         <div class="place-card">
-          <img src="https://cdn.pixabay.com/photo/2025/06/09/14/30/tea-plantation-9650105_1280.jpg" alt="Munnar Hills" />
+          <img src="https://cdn.pixabay.com/photo/2025/06/09/14/30/tea-plantation-9650105_1280.jpg" alt="Munnar tea gardens and misty hills" />
           <h3>🌿 Munnar</h3>
-          <p>Rolling hills covered with tea plantations and misty mountains perfect for nature lovers.</p>
-          <button class="btn-primary" onclick="goToPage('book-munnar.html')">Book Now</button>
+          <p>Rolling tea plantations, misty mountains, and cool climate – perfect for nature lovers and honeymooners.</p>
+          <button class="btn-primary" onclick="goToPage('munnar.html')">Book Munnar Tour</button>
         </div>
         <div class="place-card">
-          <img src="https://images.unsplash.com/photo-1677475455506-1e429162f44f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWxsZXBwZXl8ZW58MHx8MHx8fDA%3D" alt="Alleppey Backwaters" />
+          <img src="https://images.unsplash.com/photo-1677475455506-1e429162f44f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWxsZXBwZXl8ZW58MHx8MHx8fDA%3D" alt="Alleppey backwaters and houseboat cruise" />
           <h3>🚤 Alleppey</h3>
-          <p>Famous for tranquil backwaters and houseboat cruises through serene lagoons.</p>
-          <button class="btn-primary" onclick="goToPage('book-alleppey.html')">Book Now</button>
+          <p>Tranquil backwaters, houseboat cruises, village life – experience the Venice of the East.</p>
+          <button class="btn-primary" onclick="goToPage('alleppey.html')">Book Alleppey Houseboat</button>
         </div>
         <div class="place-card">
-          <img src="https://images.unsplash.com/photo-1586030138336-4a854c6ddb5f?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kovalam Beach" />
+          <img src="https://images.unsplash.com/photo-1586030138336-4a854c6ddb5f?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kovalam beach and lighthouse Kerala" />
           <h3>🏖️ Kovalam</h3>
-          <p>Beautiful palm-lined beaches with golden sands and vibrant local culture.</p>
-          <button class="btn-primary" onclick="goToPage('book-kovalam.html')">Book Now</button>
+          <p>Palm-lined golden beaches, lighthouse views, and vibrant coastal culture.</p>
+          <button class="btn-primary" onclick="goToPage('kovalam.html')">Book Kovalam Beach Tour</button>
         </div>
         <div class="place-card">
-          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&auto=format&fit=crop&q=90" alt="Ayurveda" />
-          <h3>🦋 Ayurveda</h3>
-          <p>Lush green forests, waterfalls, and wildlife sanctuaries to explore.</p>
-          <button class="btn-primary" onclick="goToPage('book-ayurveda.html')">Book Now</button>
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1600&auto=format&fit=crop&q=90" alt="Ayurveda wellness massage Kerala" />
+          <h3>🧘 Ayurveda</h3>
+          <p>Authentic Ayurvedic treatments, yoga, detox & rejuvenation for complete mind-body wellness.</p>
+          <button class="btn-primary" onclick="goToPage('ayurveda.html')">Book Ayurveda Package</button>
         </div>
       </div>
     </section>
+
     <section id="services" class="section-box reveal">
-      <h2>✨ Our Services</h2>
+      <h2>✨ Our Premium Services</h2>
       <div class="services-grid">
         <div class="service-card">
-          <h3>🧭 Guided Tours</h3>
-          <p>Experience Kerala's rich culture, history, and nature with our expert local guides.</p>
+          <h3>🧭 Guided Kerala Tours</h3>
+          <p>Expert local guides for authentic cultural, historical & nature experiences across Kerala.</p>
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80" alt="Guided Tours" />
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80" alt="Guided tour in Kerala" />
           </div>
         </div>
         <div class="service-card">
-          <h3>🎯 Custom Itineraries</h3>
-          <p>Tailor-made Kerala tour plans to match your interests, dates and budget.</p>
+          <h3>🎯 Custom Kerala Itineraries</h3>
+          <p>Tailor-made tour plans designed for your dates, budget, and interests – family, honeymoon or adventure.</p>
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=320&q=80" alt="Customized Itineraries" />
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=320&q=80" alt="Custom Kerala tour planning" />
           </div>
         </div>
         <div class="service-card">
-          <h3>🚗 Transportation</h3>
-          <p>Comfortable, well-maintained vehicles with professional drivers for smooth travel.</p>
+          <h3>🚗 Comfortable Kerala Transfers</h3>
+          <p>Well-maintained AC vehicles with professional drivers for safe & smooth travel across Kerala.</p>
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=320&q=80" alt="Transportation" />
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=320&q=80" alt="Comfortable car transfer in Kerala" />
           </div>
         </div>
         <div class="service-card">
-          <h3>🏨 Accommodation</h3>
-          <p>Cozy homestays, resorts and hotels from budget to premium range.</p>
+          <h3>🏨 Best Kerala Accommodations</h3>
+          <p>Handpicked homestays, resorts & hotels – budget to luxury – with perfect locations.</p>
           <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1591832939387-5fb33efb2c5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWNjb21tb2RhdGlvbiUyMGJvb2tpbmclMjBrZXJhbGF8ZW58MHx8MHx8fDA%3D" alt="Accommodation Booking" />
+            <img src="https://images.unsplash.com/photo-1591832939387-5fb33efb2c5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWNjb21tb2RhdGlvbiUyMGJvb2tpbmclMjBrZXJhbGF8ZW58MHx8MHx8fDA%3D" alt="Luxury resort accommodation in Kerala" />
           </div>
         </div>
       </div>
     </section>
+
     <section id="about" class="section-box reveal">
-      <h2>❤️ About Us</h2>
-      <p>We are a family-run tour service based in Kerala, dedicated to providing personalized and memorable experiences. With strong local connections and on-ground expertise, we help you discover both famous sights and hidden gems of God's Own Country.</p>
+      <h2>❤️ About Mannakuzhil Tours</h2>
+      <p>We are a passionate, family-run Kerala tour company dedicated to creating unforgettable, personalized experiences. With deep local knowledge and strong connections, we take you beyond the usual tourist spots to discover the real soul of God's Own Country – from hidden backwaters to misty hill stations.</p>
     </section>
+
     <section id="contact" class="section-box reveal">
-      <h2>📞 Contact Us</h2>
+      <h2>📞 Contact Us Today</h2>
       <div class="contact-info">
         <p><a href="mailto:booking@mannakuzhiltours.com" class="contact-link">📧 booking@mannakuzhiltours.com</a></p>
-        <p><strong>📞 +91 98765 43210</strong></p>
+        <p><strong>📞 +91 98765 43210</strong> (Call / WhatsApp)</p>
         <p><strong>📍 Mannakuzhil, Kerala, India</strong></p>
       </div>
     </section>
   </main>
-  <footer>© 2025 Mannakuzhil Tours. All rights reserved.</footer>
+
+  <footer>© 2026 Mannakuzhil Tours – Authentic Kerala Travel Experiences. All rights reserved.</footer>
 
   <script>
-    // Scroll effects for header
     const headerContainer = document.getElementById('headerContainer');
     const nav = document.getElementById('nav');
     
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        headerContainer.classList.add('scrolled');
-      } else {
-        headerContainer.classList.remove('scrolled');
-      }
+      headerContainer.classList.toggle('scrolled', window.scrollY > 50);
       
-      // Update scroll progress bar
-      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (winScroll / height) * 100;
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
       nav.style.setProperty('--scroll-progress', scrolled + '%');
-      document.querySelector('nav::after') && (nav.querySelector('::after').style.width = scrolled + '%');
     });
 
     const revealEls = document.querySelectorAll('.reveal');
     function handleReveal() {
       const triggerBottom = window.innerHeight * 0.8;
-      revealEls.forEach((el, index) => {
+      revealEls.forEach((el, i) => {
         const rect = el.getBoundingClientRect();
         if (rect.top < triggerBottom && !el.classList.contains('visible')) {
-          setTimeout(() => el.classList.add('visible'), index * 150);
+          setTimeout(() => el.classList.add('visible'), i * 150);
         }
       });
     }
@@ -647,9 +600,7 @@
 
     function goToPage(url) {
       document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = url;
-      }, 400);
+      setTimeout(() => window.location.href = url, 400);
     }
 
     const navLinks = document.querySelectorAll('nav a');
@@ -658,20 +609,16 @@
       let current = 'home';
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 200;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
+        if (window.scrollY >= sectionTop) current = section.id;
       });
       navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
       });
     }
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
 
+    // Card hover tilt effect (desktop only)
     const cards = document.querySelectorAll('.place-card, .service-card');
     cards.forEach(card => {
       if (window.innerWidth >= 769) {
@@ -683,30 +630,15 @@
           const rotateX = ((y / rect.height) - 0.5) * -8;
           card.style.transform = `translateY(-12px) scale(1.03) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = '';
-        });
+        card.addEventListener('mouseleave', () => card.style.transform = '');
       }
-      card.addEventListener('touchstart', function() {
-        this.style.transform = 'scale(0.98)';
-      }, { passive: true });
-      ['touchend', 'touchcancel'].forEach(event => {
-        card.addEventListener(event, () => {
-          setTimeout(() => {
-            if (window.innerWidth < 769) this.style.transform = '';
-          }, 200);
-        }, { passive: true });
-      });
     });
 
-    document.querySelectorAll('.btn-primary').forEach(btn => {
-      btn.addEventListener('touchstart', function() {
-        this.style.transform = 'scale(0.95)';
-      }, { passive: true });
-      ['touchend', 'touchcancel'].forEach(event => {
-        btn.addEventListener(event, () => {
-          setTimeout(() => this.style.transform = '', 200);
-        }, { passive: true });
+    // Touch feedback
+    document.querySelectorAll('.btn-primary, .place-card').forEach(el => {
+      el.addEventListener('touchstart', () => el.style.transform = 'scale(0.95)', { passive: true });
+      ['touchend', 'touchcancel'].forEach(evt => {
+        el.addEventListener(evt, () => setTimeout(() => el.style.transform = '', 200), { passive: true });
       });
     });
   </script>

@@ -359,12 +359,39 @@
         gap: 24px;
       }
     }
-    .service-image {
-  width: 100%;
-  height: 200px; /* Fixed height for uniformity */
+  /* Service cards - match style of booking cards above */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(18px, 3vw, 24px);
+  justify-content: center;
+}
+
+.service-card {
+  background: linear-gradient(135deg, var(--card-bg), rgba(208,232,215,0.9));
+  border-radius: 20px;
+  padding: clamp(20px, 3vw, 28px);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,90,0,0.15);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(165,214,167,0.4);
+  min-height: 380px; /* Slightly shorter than booking cards */
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0,90,0,0.3);
+}
+
+.service-image {
+  width: 180px;
+  height: 180px;
   overflow: hidden;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
   border: 4px solid #a5d6a7;
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
@@ -372,13 +399,27 @@
 .service-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Perfect fit – crops intelligently without distortion */
+  object-fit: cover;
   object-position: center;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s ease;
 }
 
 .service-card:hover .service-image img {
-  transform: scale(1.1);
+  transform: scale(1.12);
+}
+
+.service-card h3 {
+  margin: 12px 0 8px;
+  color: #1a3d27;
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-weight: 800;
+}
+
+.service-card p {
+  color: #2e4d30;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  line-height: 1.6;
+  flex-grow: 1;
 }
   </style>
 </head>

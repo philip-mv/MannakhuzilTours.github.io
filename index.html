@@ -517,14 +517,15 @@
       margin-bottom: 4px;
     }
 
-    /* Testimonials */
-    .testimonials-grid {
+    /* How it works */
+    .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
+      margin-top: 10px;
     }
 
-    .testimonial-card {
+    .step-card {
       background: rgba(240, 251, 240, 0.98);
       border-radius: 18px;
       padding: 18px 18px 16px;
@@ -533,9 +534,23 @@
       font-size: 0.95rem;
     }
 
-    .testimonial-name {
-      margin-top: 10px;
+    .step-number {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+      color: #fff;
+      text-align: center;
+      line-height: 26px;
       font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .step-title {
+      font-weight: 700;
+      margin-bottom: 4px;
       color: #1a3d27;
     }
 
@@ -784,22 +799,30 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- How it works Section -->
     <section class="section-box reveal">
-      <h2>🌟 Guest experiences</h2>
-      <p class="section-subtitle">A few words from travelers who explored Kerala with us.</p>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          “We had a smooth 6-day trip covering Munnar and Alleppey. Hotels, driver, and houseboat were all well arranged. The team was available on call throughout.”
-          <div class="testimonial-name">— Family from Bengaluru</div>
+      <h2>📝 How booking with us works</h2>
+      <p class="section-subtitle">Simple steps to plan and confirm your Kerala trip through Mannakuzhil Tours.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-title">Share your basic plan</div>
+          <div>Tell us your travel dates, number of travelers, and places you are interested in (for example Munnar, Alleppey, Kovalam, Wayanad).</div>
         </div>
-        <div class="testimonial-card">
-          “Perfect honeymoon plan with enough time to relax. They suggested good view rooms and helped us customize the itinerary without any hassle.”
-          <div class="testimonial-name">— Couple from Mumbai</div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-title">Get a custom itinerary</div>
+          <div>We suggest a route with suitable stays, sightseeing points, and approximate pricing, which you can review and fine-tune with us.</div>
         </div>
-        <div class="testimonial-card">
-          “Traveling with parents, we needed a relaxed schedule. Mannakuzhil Tours adjusted timings, ensured comfortable stays, and made the trip stress-free.”
-          <div class="testimonial-name">— Group from Chennai</div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-title">Confirm your booking</div>
+          <div>Once you are happy with the plan, you can confirm by paying an advance as discussed. We then finalize hotels, vehicles and houseboats.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-title">Travel with on-trip support</div>
+          <div>During your trip, we coordinate with drivers and stays, and you can reach us easily by phone for any help or adjustments.</div>
         </div>
       </div>
     </section>
@@ -827,7 +850,7 @@
             <p><strong>📍 Mannakuzhil, Kerala, India</strong></p>
           </div>
           <p class="contact-note">
-            You can also share your requirements through a simple email with dates, number of people, and preferred places (Munnar, Alleppey, Kovalam, etc.).
+            You can also send a simple email with: dates, number of people, preferred places (Munnar, Alleppey, Kovalam, etc.), and any special requirements.
           </p>
         </div>
         <div>

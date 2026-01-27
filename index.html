@@ -539,7 +539,7 @@
       color: #1a3d27;
     }
 
-    /* Contact / enquiry */
+    /* Contact layout */
     .contact-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -561,100 +561,10 @@
       text-decoration: underline;
     }
 
-    .enquiry-box {
-      background: rgba(240, 251, 240, 0.98);
-      border-radius: 18px;
-      padding: 18px 18px 20px;
-      border: 1px solid rgba(165,214,167,0.7);
-      box-shadow: 0 6px 18px rgba(0,60,0,0.14);
-    }
-
-    .enquiry-box h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-    }
-
-    .enquiry-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .enquiry-field {
-      margin-bottom: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .contact-note {
+      margin-top: 10px;
       font-size: 0.9rem;
-    }
-
-    .enquiry-field input,
-    .enquiry-field textarea,
-    .enquiry-field select {
-      border-radius: 999px;
-      border: 1px solid #c5e1a5;
-      padding: 8px 12px;
-      font-family: inherit;
-      font-size: 0.9rem;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .enquiry-field textarea {
-      border-radius: 14px;
-      min-height: 70px;
-      resize: vertical;
-    }
-
-    .enquiry-field input:focus,
-    .enquiry-field textarea:focus,
-    .enquiry-field select:focus {
-      border-color: var(--green-main);
-      box-shadow: 0 0 0 2px rgba(76,175,80,0.18);
-    }
-
-    .enquiry-submit {
-      margin-top: 6px;
-      width: 100%;
-      border-radius: 999px;
-      border: none;
-      padding: 10px 16px;
-      background: linear-gradient(135deg, var(--green-main), var(--green-dark));
-      color: #fff;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0,60,0,0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .enquiry-submit:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0,60,0,0.3);
-    }
-
-    /* Floating WhatsApp button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 18px;
-      right: 16px;
-      z-index: 1500;
-      background: #25D366;
-      color: #fff;
-      border-radius: 999px;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-      text-decoration: none;
-    }
-
-    .whatsapp-float:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+      color: #4a6a54;
     }
 
     footer {
@@ -677,18 +587,12 @@
         padding: 20px 12px;
         padding-top: 150px;
       }
-
       .places {
         flex-direction: column;
         gap: 24px;
       }
-
       .hero-cta-group {
         flex-direction: column;
-      }
-
-      .whatsapp-float span:last-child {
-        display: none; /* Keep only icon + WA text on very small screens */
       }
     }
   </style>
@@ -726,9 +630,9 @@
             </p>
             <div class="hero-cta-group">
               <button class="btn-hero" onclick="scrollToSection('packages')">View tour packages</button>
-              <a class="btn-hero-outline" href="https://wa.me/917006860319?text=Hi%20Mannakuzhil%20Tours%2C%20I%27d%20like%20to%20plan%20a%20Kerala%20trip." target="_blank" rel="noopener">
-                💬 WhatsApp for quote
-              </a>
+              <button class="btn-hero-outline" onclick="scrollToSection('contact')">
+                📞 Call / Email us
+              </button>
             </div>
           </div>
         </div>
@@ -791,7 +695,7 @@
         </div>
         <div class="why-item">
           <div class="why-item-title">Transparent pricing</div>
-          <div>Clear inclusions, no hidden charges, and easy communication by phone and WhatsApp.</div>
+          <div>Clear inclusions, no hidden charges, and easy communication by phone and email.</div>
         </div>
       </div>
     </section>
@@ -911,64 +815,31 @@
       </p>
     </section>
 
-    <!-- Contact + Quick Enquiry Section -->
+    <!-- Contact Section -->
     <section id="contact" class="section-box reveal">
-      <h2>📞 Contact & Quick Enquiry</h2>
+      <h2>📞 Contact Us</h2>
       <div class="contact-layout">
         <div>
-          <p class="section-subtitle">Share your dates and rough plan – we’ll reply with a custom itinerary and pricing.</p>
+          <p class="section-subtitle">Reach out with your travel dates and rough plan – we’ll reply with a custom itinerary and pricing.</p>
           <div class="contact-info">
             <p><a href="mailto:booking@mannakuzhiltours.com" class="contact-link">📧 booking@mannakuzhiltours.com</a></p>
             <p><strong>📞 +91 70068 60319</strong></p>
             <p><strong>📍 Mannakuzhil, Kerala, India</strong></p>
           </div>
+          <p class="contact-note">
+            You can also share your requirements through a simple email with dates, number of people, and preferred places (Munnar, Alleppey, Kovalam, etc.).
+          </p>
         </div>
         <div>
-          <div class="enquiry-box">
-            <h3>Plan your Kerala trip</h3>
-            <form onsubmit="handleEnquirySubmit(event)">
-              <div class="enquiry-row">
-                <div class="enquiry-field">
-                  <label for="enqName">Name</label>
-                  <input id="enqName" type="text" required placeholder="Your name" />
-                </div>
-                <div class="enquiry-field">
-                  <label for="enqPhone">Phone / WhatsApp</label>
-                  <input id="enqPhone" type="tel" required placeholder="+91…" />
-                </div>
-              </div>
-              <div class="enquiry-row">
-                <div class="enquiry-field">
-                  <label for="enqDates">Travel dates</label>
-                  <input id="enqDates" type="text" placeholder="Eg. 10–15 March 2026" />
-                </div>
-                <div class="enquiry-field">
-                  <label for="enqPeople">No. of people</label>
-                  <input id="enqPeople" type="number" min="1" placeholder="Eg. 4" />
-                </div>
-              </div>
-              <div class="enquiry-field">
-                <label for="enqPlaces">Places you want to visit</label>
-                <input id="enqPlaces" type="text" placeholder="Eg. Munnar, Alleppey, Kovalam" />
-              </div>
-              <div class="enquiry-field">
-                <label for="enqMessage">Anything else we should know?</label>
-                <textarea id="enqMessage" placeholder="Share your preferences, special requirements, or budget range."></textarea>
-              </div>
-              <button type="submit" class="enquiry-submit">Send via WhatsApp</button>
-            </form>
-          </div>
+          <p class="contact-note">
+            Prefer booking package-wise? Use the “View / Book” buttons under each package (Munnar, Alleppey, Kovalam, Ayurveda) to see details and confirm your trip from those pages.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>© 2026 Mannakuzhil Tours. All rights reserved.</footer>
-
-  <!-- Floating WhatsApp -->
-  <a class="whatsapp-float" href="https://wa.me/917006860319?text=Hi%20Mannakuzhil%20Tours%2C%20I%27d%20like%20to%20plan%20a%20Kerala%20trip." target="_blank" rel="noopener">
-    <span>💬</span><span>WhatsApp</span><span>Now</span>
-  </a>
 
   <script>
     // Smooth scroll helper
@@ -1047,28 +918,6 @@
     }
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
-
-    // Enquiry form -> WhatsApp
-    function handleEnquirySubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('enqName').value.trim();
-      const phone = document.getElementById('enqPhone').value.trim();
-      const dates = document.getElementById('enqDates').value.trim();
-      const people = document.getElementById('enqPeople').value.trim();
-      const places = document.getElementById('enqPlaces').value.trim();
-      const message = document.getElementById('enqMessage').value.trim();
-
-      let text = "Hi Mannakuzhil Tours,%0A%0AI%27d like to plan a Kerala trip.%0A%0A";
-      if (name) text += "Name: " + encodeURIComponent(name) + "%0A";
-      if (phone) text += "Phone/WhatsApp: " + encodeURIComponent(phone) + "%0A";
-      if (dates) text += "Travel dates: " + encodeURIComponent(dates) + "%0A";
-      if (people) text += "Number of people: " + encodeURIComponent(people) + "%0A";
-      if (places) text += "Places: " + encodeURIComponent(places) + "%0A";
-      if (message) text += "%0AExtra details: " + encodeURIComponent(message) + "%0A";
-
-      const waUrl = "https://wa.me/917006860319?text=" + text;
-      window.open(waUrl, "_blank");
-    }
   </script>
 </body>
 </html>

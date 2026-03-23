@@ -13,8 +13,41 @@
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://www.mannakuzhiltours.com/">
  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mannakuzhiltours.com/">
+  <meta property="og:title" content="Mannakuzhil Tours – Best Kerala & India Tour Packages 2026">
+  <meta property="og:description" content="Family-run tour operator offering customized holidays across Kerala, Kashmir, Goa, Rajasthan, and Karnataka.">
+  <meta property="og:image" content="https://www.mannakuzhiltours.com/logo-square.png">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mannakuzhil Tours – India Travel">
+  <meta name="twitter:description" content="Custom itineraries, houseboat cruises, and majestic heritage tours.">
+ 
   <link rel="icon" type="image/png" sizes="32x32" href="logo-square.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo-square.png">
   <link rel="apple-touch-icon" href="logo-square.png">
+  <link rel="shortcut icon" href="logo-square.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Mannakuzhil Tours",
+    "image": "https://www.mannakuzhiltours.com/logo-square.png",
+    "@id": "https://www.mannakuzhiltours.com/",
+    "url": "https://www.mannakuzhiltours.com/",
+    "telephone": "+91 70068 60319",
+    "email": "booking@mannakuzhiltours.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mannakuzhil",
+      "addressRegion": "Kerala",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["Kerala", "Kashmir", "Goa", "Karnataka", "Rajasthan"],
+    "priceRange": "$$"
+  }
+  </script>
 
   <style>
     :root {
@@ -23,6 +56,7 @@
       --green-light: #d0e8d7;
       --card-bg: rgba(255, 255, 255, 0.96);
       --accent-gold: #ffb300;
+      --ocean-bg: #e0f7fa;
       --text-dark: #1a3d27;
       --spring-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
@@ -47,7 +81,7 @@
 
     .carousel { position: relative; width: 100%; height: clamp(400px, 65vh, 600px); overflow: hidden; margin-bottom: 40px; border-radius: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
     .carousel-slides { position: relative; width: 100%; height: 100%; }
-    .carousel-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease-in-out; }
+    .carousel-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s ease-in-out; will-change: opacity; }
     .carousel-slide.active { opacity: 1; z-index: 2; }
     .carousel-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%); display: flex; align-items: center; justify-content: flex-end; padding-bottom: 80px; text-align: center; color: white; flex-direction: column; gap: 16px; z-index: 3; }
     .carousel-title { font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 900; text-shadow: 0 4px 12px rgba(0,0,0,0.5); max-width: 95%; line-height: 1.05; margin: 0; letter-spacing: -1px; }
@@ -58,7 +92,7 @@
    
     .header-container { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: transparent; transition: all 0.4s ease; }
     .header-container.scrolled { box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
-    header { background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(27,94,32,0.95)); color: #daf5d6; padding: 16px 20px; display: flex; align-items: center; gap: 16px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: padding 0.3s ease; }
+    header { background: linear-gradient(135deg, rgba(46,125,50,0.95), rgba(27,94,32,0.95)); color: #daf5d6; padding: 16px 20px; display: flex; align-items: center; gap: 16px; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: padding 0.3s ease; position: relative; }
     .header-container.scrolled header { padding: 10px 20px; }
     header .logo { width: 48px; height: 48px; border-radius: 14px; object-fit: contain; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s var(--spring-easing); }
     .header-container.scrolled .logo { width: 40px; height: 40px; }
@@ -308,6 +342,48 @@
             <p class="carousel-subtitle">Customized holidays 2026 across Munnar, Alleppey, Kashmir, Goa, and more.</p>
           </div>
         </article>
+        <article class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=1600&auto=format&fit=crop&q=80')">
+          <div class="carousel-overlay">
+            <h2 class="carousel-title">Serene Kerala Backwaters</h2>
+            <p class="carousel-subtitle">Glide through quiet canals and village life on curated houseboat experiences.</p>
+          </div>
+        </article>
+        <article class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?w=1600&auto=format&fit=crop&q=80');">
+          <div class="carousel-overlay">
+            <h2 class="carousel-title">Paradise on Earth: Kashmir</h2>
+            <p class="carousel-subtitle">Experience Shikara rides on Dal Lake and the snow-capped peaks of Gulmarg.</p>
+          </div>
+        </article>
+        <article class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1600&auto=format&fit=crop&q=80');">
+          <div class="carousel-overlay">
+            <h2 class="carousel-title">Royal Rajputana Heritage</h2>
+            <p class="carousel-subtitle">Step back in time through the majestic forts and golden deserts of Rajasthan.</p>
+          </div>
+        </article>
+        <article class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1600112356915-089abb8fc71a?q=80&w=1294&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+          <div class="carousel-overlay">
+            <h2 class="carousel-title">The Heritage of Karnataka</h2>
+            <p class="carousel-subtitle">From the misty coffee hills of Coorg to the grand royal palaces of Mysore.</p>
+          </div>
+        </article>
+      </div>
+      <div class="carousel-controls" aria-label="Carousel Controls">
+        <span class="carousel-dot active" data-index="0" role="button" aria-label="Show slide 1" tabindex="0"></span>
+        <span class="carousel-dot" data-index="1" role="button" aria-label="Show slide 2" tabindex="0"></span>
+        <span class="carousel-dot" data-index="2" role="button" aria-label="Show slide 3" tabindex="0"></span>
+        <span class="carousel-dot" data-index="3" role="button" aria-label="Show slide 4" tabindex="0"></span>
+        <span class="carousel-dot" data-index="4" role="button" aria-label="Show slide 5" tabindex="0"></span>
+      </div>
+    </section>
+    
+    <section class="section-box reveal">
+      <h2>💚 Why travel with us</h2>
+      <p class="section-subtitle">Local expertise, personal care, and flexible planning for every type of traveler.</p>
+      <div class="why-strip">
+        <div class="why-item"><div class="why-item-title">Local & family-run</div><div>Plan and support handled directly by our dedicated travel team.</div></div>
+        <div class="why-item"><div class="why-item-title">Custom itineraries</div><div>Trips tailored for families, honeymooners, and groups.</div></div>
+        <div class="why-item"><div class="why-item-title">End-to-end support</div><div>Airport pickup, hotels, houseboats, and transport arranged.</div></div>
+        <div class="why-item"><div class="why-item-title">Transparent pricing</div><div>Clear inclusions, no hidden charges, easy communication.</div></div>
       </div>
     </section>
     
@@ -384,6 +460,20 @@
                 <p>Tranquil backwaters and houseboat stays with traditional food and peaceful village views.</p>
                 <button class="btn-primary" tabindex="-1">View / Book</button>
               </article>
+              <article class="place-card" onclick="goToPage('book-kovalam.html')" role="button" tabindex="0" aria-label="Book Kovalam Package">
+                <img src="https://images.unsplash.com/photo-1586030138336-4a854c6ddb5f?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scenic beach view in Kovalam" loading="lazy" width="400" height="200"/>
+                <h3>🏖️ Kovalam</h3>
+                <div class="package-meta">Ideal for relaxation · 1–2 nights</div>
+                <p>Palm-fringed beaches, lighthouse views, and seaside stays; can be combined with Trivandrum sightseeing.</p>
+                <button class="btn-primary" tabindex="-1">View / Book</button>
+              </article>
+              <article class="place-card" onclick="goToPage('book-ayurveda.html')" role="button" tabindex="0" aria-label="Book Ayurveda Package">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&auto=format&fit=crop&q=60" alt="Ayurvedic spa treatment setting" loading="lazy" width="400" height="200"/>
+                <h3>🦋 Ayurveda & Wellness</h3>
+                <div class="package-meta">Ideal for wellness seekers · 3–7+ nights</div>
+                <p>Authentic Ayurvedic treatments, yoga, detox & rejuvenation programs in peaceful Kerala settings.</p>
+                <button class="btn-primary" tabindex="-1">View / Book</button>
+              </article>
             </div>
           </div>
           
@@ -442,9 +532,134 @@
         </div>
       </div>
     </section>
+    
+    <section id="services" class="section-box reveal">
+      <h2>✨ Our Services</h2>
+      <p class="section-subtitle">We handle just one part of your trip or the entire journey end-to-end.</p>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-image"><img src="logo-square.png" alt="Guided Tours Icon" loading="lazy" width="140" height="140"/></div>
+          <h3>🧭 Guided Tours</h3>
+          <p>Experience local rich culture, history, and nature with our expert local guides.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-image"><img src="7876122[1].jpg" alt="Custom Itineraries Icon" loading="lazy" width="140" height="140"/></div>
+          <h3>🎯 Custom Itineraries</h3>
+          <p>Tailor-made tour plans to match your interests, dates, travel pace, and budget.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-image"><img src="3d-car-with-minimal-background.jpg" alt="Transportation Icon" loading="lazy" width="140" height="140"/></div>
+          <h3>🚗 Transportation</h3>
+          <p>Comfortable vehicles with professional drivers for airport pickup and local sightseeing.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-image"><img src="https://static.vecteezy.com/system/resources/thumbnails/040/519/333/small/indian-kerala-traditional-house-vector.jpg" alt="Accommodations Icon" loading="lazy" width="140" height="140"/></div>
+          <h3>🏨 Accommodation</h3>
+          <p>Cozy homestays, boutique resorts, and premium hotels carefully chosen for comfort.</p>
+        </article>
+      </div>
+    </section>
+    
+    <section class="section-box reveal">
+      <h2>📝 How booking works</h2>
+      <p class="section-subtitle">Simple steps to plan and confirm your trip.</p>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-number" aria-hidden="true">1</div><div class="step-title">Reach Out</div><div>Send us an email or WhatsApp with your travel dates.</div></div>
+        <div class="step-card"><div class="step-number" aria-hidden="true">2</div><div class="step-title">Custom Plan</div><div>We’ll reply within 24 hours with a custom itinerary & rate.</div></div>
+        <div class="step-card"><div class="step-number" aria-hidden="true">3</div><div class="step-title">Confirm</div><div>Once happy with the plan, confirm by paying an advance.</div></div>
+        <div class="step-card"><div class="step-number" aria-hidden="true">4</div><div class="step-title">Chillax 😎</div><div>Sit back and get ready to enjoy incredible India.</div></div>
+      </div>
+    </section>
+    
+    <section id="about" class="section-box reveal">
+      <h2>❤️ About Us</h2>
+      <p>We are a family-run tour service based in Mannakuzhil, Kerala, dedicated to providing personalized and memorable experiences.</p>
+      <p>Our local connections, on-ground knowledge, and hands-on trip coordination help you enjoy both the famous highlights and quiet hidden spots at a relaxed pace.</p>
+    </section>
+    
+    <section id="contact" class="section-box reveal">
+      <h2>📞 Contact Us</h2>
+      <p class="section-subtitle">Reach out with your dates – we’ll reply with a plan within 24 hours.</p>
+      
+      <div class="contact-layout">
+        <div class="contact-details-card" itemscope itemtype="https://schema.org/LocalBusiness">
+          <meta itemprop="name" content="Mannakuzhil Tours">
+          <div class="contact-info">
+            <p><strong>📧 Email:</strong> <a href="mailto:booking@mannakuzhiltours.com" class="contact-link" itemprop="email">booking@mannakuzhiltours.com</a></p>
+            <p><strong>📞 Phone:</strong> <a href="tel:+917006860319" class="contact-link" itemprop="telephone">+91 70068 60319</a></p>
+            <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <strong>📍 Office:</strong> <span itemprop="streetAddress">Mannakuzhil</span>, <span itemprop="addressRegion">Kerala</span>, <span itemprop="addressCountry">India</span>
+            </p>
+          </div>
+          
+          <nav class="social-links" aria-label="Social Media Links">
+            <a href="https://instagram.com/mannakuzhil_tours" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="social-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1AzC5kd9Ws/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook Page" class="social-btn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.324V1.325C24 .597 23.403 0 22.675 0z"/></svg>
+            </a>
+          </nav>
+        </div>
+        
+        <aside>
+          <div class="contact-note">
+            <p><strong>💡 Quick Tip:</strong> Use the <strong>"View / Book"</strong> buttons under each package to see details and confirm your trip from those dedicated pages!</p>
+            <p>You can also send a simple email with: dates, number of people, preferred places, and any special requirements.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
   </main>
+  
+  <footer role="contentinfo">
+    <p>© 2026 Mannakuzhil Tours. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/917006860319" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us directly on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
 
   <script>
+    function scrollToSection(id) { const el = document.getElementById(id); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }
+   
+    const slides = document.querySelectorAll('.carousel-slide'); 
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentIndex = 0; 
+    const slideInterval = 6000;
+    
+    function showSlide(index) { 
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index)); 
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.setAttribute('aria-selected', i === index);
+      }); 
+      currentIndex = index; 
+    }
+    
+    function nextSlide() { 
+      let next = (currentIndex + 1) % slides.length; 
+      showSlide(next); 
+    }
+    
+    let interval = setInterval(nextSlide, slideInterval);
+    
+    dots.forEach(dot => { 
+      dot.addEventListener('click', () => { 
+        clearInterval(interval); 
+        showSlide(parseInt(dot.dataset.index)); 
+        interval = setInterval(nextSlide, slideInterval); 
+      });
+      dot.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dot.click();
+        }
+      });
+    });
+   
     const headerContainer = document.getElementById('headerContainer');
     window.addEventListener('scroll', () => { 
       headerContainer.classList.toggle('scrolled', window.scrollY > 50); 
@@ -466,11 +681,38 @@
       document.body.classList.add('fade-out'); 
       setTimeout(() => window.location.href = url, 400); 
     }
+   
+    const navLinks = document.querySelectorAll('nav a'); 
+    const sections = document.querySelectorAll('section, main');
+    function updateActiveNav() { 
+      let current = 'home'; 
+      sections.forEach(section => { 
+        const sectionTop = section.offsetTop - 200; 
+        if (window.scrollY >= sectionTop) current = section.id || current; 
+      }); 
+      navLinks.forEach(link => { 
+        const isActive = link.getAttribute('href') === `#${current}`;
+        link.classList.toggle('active', isActive); 
+        if (isActive) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      }); 
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true }); 
+    updateActiveNav();
 
     document.addEventListener('DOMContentLoaded', () => {
       const mapPins = document.querySelectorAll('.map-pin');
       const packageGroups = document.querySelectorAll('.state-package-group');
       const defaultMessage = document.getElementById('default-message');
+      
+      document.querySelectorAll('.place-card').forEach(card => {
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
 
       mapPins.forEach(pin => {
         const activatePin = function(e) {
